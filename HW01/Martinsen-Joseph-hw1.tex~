@@ -1,0 +1,320 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm,latexsym,paralist}
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+\newtheorem*{solution}{Solution}
+\newtheorem*{resources}{Resources}
+
+\newcommand{\name}[2]{\noindent\textbf{Name: #1}\hfill \textbf{Section: #2}}
+\newcommand{\honor}{\noindent On my honor, as an Aggie, I have neither
+  given nor received any unauthorized aid on any portion of the
+  academic work included in this assignment. Furthermore, I have
+  disclosed all resources (people, books, web sites, etc.) that have
+  been used to prepare this homework. \\[2ex]
+ \textbf{Signature:} \underline{\hspace*{10cm}} }
+ 
+\newcommand{\checklist}{\noindent\textbf{Checklist:}
+\begin{compactitem}[$\Box$] 
+\item Did you type in your name and section? 
+\item Did you disclose all resources that you have used? \\
+(This includes all people, books, websites, etc.\ that you have consulted.)
+\item Did you sign that you followed the Aggie Honor Code? 
+\item Did you solve all problems? 
+\item Did you submit the .tex and .pdf files of your homework to the correct link on eCampus?
+\item Did you submit a signed hardcopy of the pdf file in class? 
+\end{compactitem}
+}
+
+\newcommand{\problemset}[1]{\begin{center}\textbf{Problem Set #1}\end{center}}
+\newcommand{\duedate}[2]{\begin{quote}\textbf{Due dates:} Electronic
+    submission of \textsl{yourLastName-yourFirstName-hw1.tex} and 
+    \textsl{yourLastName-yourFirstName-hw1.pdf} files of this homework is due on
+    \textbf{#1} on \texttt{http://ecampus.tamu.edu}. You will see two separate links
+    to turn in the .tex file and the .pdf file separately. Please do not archive or compress the files.  
+    A signed paper copy of the pdf file is due on \textbf{#2} \textsl{at the beginning of class}.
+    \textbf{If any of the three submissions are missing, your work will not be graded.}\end{quote} }
+
+\newcommand{\N}{\mathbf{N}}
+\newcommand{\R}{\mathbf{R}}
+\newcommand{\Z}{\mathbf{Z}}
+
+
+\begin{document}
+\vspace*{-15mm}
+\begin{center}
+{\large
+CSCE 222 [Sections 502, 503] Discrete Structures for Computing\\[.5ex]
+Spring 2017 -- Hyunyoung Lee\\}
+\end{center}
+\problemset{1}
+\duedate{Friday, 1/27/2017 before 11:00 a.m.}{Friday, 1/27/2017}
+\name{Joseph Martinsen}{503}
+\begin{resources} (All people, books, articles, web pages, etc.\ that
+  have been consulted when producing your answers to this homework.)
+\end{resources}
+\honor
+
+\smallskip
+
+\begin{problem} Section 1.1, Exercise 6 on page 13.
+\end{problem}
+\begin{solution} \ \\
+  \begin{center}
+      \begin{tabular}{|c||c|c|c|}
+        \hline
+         Smartphone & RAM (MB) & ROM (GB) & PIXELS (MP) \\
+         \hline
+         A & 256 & 32 & 8 \\
+         \hline
+         B & 288 & 64 & 4 \\
+         \hline
+         C & 128 & 32 & 5 \\
+         \hline
+      \end{tabular}
+    \end{center}
+    
+    \begin{enumerate}[(a)]
+      \item \textbf{Phrase:} Smartphone B has the most RAM of these three smart-phones. \\
+        \textbf{Logic:} $(B_{RAM} > A_{RAM}) \wedge (B_{RAM} > C_{RAM})$ \\
+        \textbf{Analysis:} 
+        \begin{align*}
+          (288 > 256) & \wedge (288 > 128) \\
+          T & \wedge T \\
+          &T
+        \end{align*}
+        $\therefore$ The \textbf{Phrase} is $T$
+          
+      \item \textbf{Phrase:} Smartphone C has more ROM or a higher resolution camera than Smartphone B. \\
+        \textbf{Logic:} $(C_{ROM} > B_{ROM}) \lor (C_{PIX} > B_{PIX})$ \\
+        \textbf{Analysis:} 
+        \begin{align*}
+          (32 > 64) & \lor (5 > 4) \\
+          F & \lor T \\
+          &T
+        \end{align*}
+        $\therefore$ The \textbf{Phrase} is $T$
+      
+      \item \textbf{Phrase:} Smartphone B has more RAM, more ROM, and a higher resolution camera than Smartphone A. \\
+        \textbf{Logic:} $(B_{RAM} > A_{RAM}) \land (B_{ROM} > A_{ROM}) \land (B_{PIX} > A_{PIX})$ \\
+        \textbf{Analysis:} 
+        \begin{align*}
+          (288 > 256) \wedge (64 &> 32) \land (4 > 8) \\
+          T \land &T \land F \\
+          &F
+        \end{align*}
+        $\therefore$ The \textbf{Phrase} is $F$
+      
+      \item \textbf{Phrase:} If Smartphone B has more RAM and more ROM than Smartphone C, then it also has a higher resolution camera.\\
+        \textbf{Logic:} $((B_{RAM} > C_{RAM}) \land (B_{ROM} > C_{ROM})) \rightarrow (B_{PIX} > C_{PIX})$ \\
+        \textbf{Analysis:} 
+        \begin{align*}
+          ((288 > 128) \wedge (64 > 32)) &\rightarrow (4 > 5) \\
+          (T \land T) &\rightarrow F \\
+          T &\rightarrow F \\
+          &F
+        \end{align*}
+        $\therefore$ The \textbf{Phrase} is $F$
+        
+      \item \textbf{Phrase:} Smartphone A has more RAM than Smartphone B if and only if Smartphone B has more RAM than Smart-phone A. \\
+        \textbf{Logic:} $(A_{RAM} > B_{RAM}) \leftrightarrow  (B_{RAM} > A_{RAM})$ \\
+        \textbf{Analysis:} 
+        \begin{align*}
+          (256 > 288) &\leftrightarrow (288 > 256) \\
+          F &\leftrightarrow T\\
+          &F
+        \end{align*}
+        $\therefore$ The \textbf{Phrase} is $F$
+        
+    \end{enumerate}
+\end{solution}
+
+\begin{problem} Section 1.1, Exercise 16 on page 14.
+\end{problem}
+\begin{solution} \ \\
+\begin{enumerate}[(a)]
+  \item $2 + 2 = 4$ if and only if $1 + 1 = 2$ \\
+  $T \leftrightarrow T$ \\
+  $\therefore T$
+  
+  \item $1 + 1 = 2$ if and only if $2 + 3 = 4$ \\
+  $T \leftrightarrow F$ \\
+  $\therefore F$
+  
+  \item $1 + 1 = 3$ if and only if monkeys can fly. \\
+  $F \leftrightarrow F$ \\
+  $\therefore T$
+  
+  \item $ 0 > 1$ if and only if $2 > 1$ \\
+  $F \leftrightarrow T$ \\
+  $\therefore F$
+\end{enumerate}
+\end{solution}
+
+\begin{problem} Section 1.1, Exercise 22 a) -- e) on page 14.
+\end{problem}
+\begin{solution} \ \\
+\begin{enumerate}[(a)]
+  \item It is necessary to wash the boss’s car to get promoted. \\
+  $p:$ one washes the boss's car \\
+  $q:$ one gets promoted\\
+  \textbf{if $p$, then $q$:} if one washes the boss's car then one gets promoted
+  
+  \item Winds from the south imply a spring thaw. \\
+  $p:$ there are winds from the south \\
+  $q:$ there will be a spring thaw \\
+  \textbf{if $p$, then $q$:} if there are winds from the south then there will be a spring thaw
+  
+  \item A sufficient condition for the warranty to be good is that you bought the computer less than a year ago. \\
+  $p:$ you bought the computer less than a year ago \\
+  $q:$ sufficient condition for the warranty is good \\
+  \textbf{if $p$, then $q$:} if you bought the computer less than a year ago then sufficient condition for the warranty is good
+  
+  \item Willy gets caught whenever he cheats. \\
+  $p:$ he cheats \\
+  $q:$ gets caught \\
+  \textbf{if $p$, then $q$:} if Willy cheats then he gets caught.
+  
+  \item You can access the website only if you pay a subscription fee. \\
+  $p:$ you pay a subscription fee \\
+  $q:$ you can access the website \\
+  \textbf{if $p$, then $q$:} if you pay a subscription fee then you can access the website
+
+\end{enumerate}
+\end{solution}
+
+\begin{problem} Section 1.1, Exercise 40 on page 16.
+\end{problem}
+\begin{solution} \ \\
+  Explain, without using a truth table, why $(p \lor \neg q) \land
+(q \lor \neg r) \land (r \lor \neg p)$ is true when $p$, $q$, and $r$ have the
+same truth value and it is false otherwise. \\
+
+\end{solution}
+
+\begin{problem} Section 1.1, Exercise 42 on page 16. \textsl{Explain.}
+\end{problem}
+\begin{solution}
+\begin{enumerate}[(a)] $x := 1$
+  \item if $x + 2 = 3$ \textbf{then} $x := x + 1$ \\
+  Since $x$ is 1 to begin with, $1 + 2 = 3$ is true \\
+  $\therefore$ $x := x + 1$ will occur and $x$ will result in $x = 2$
+  
+  \item if $(x + 1 = 3)$ OR $(2x + 2 = 3)$ \textbf{then} $x := x + 1$ \\
+  Since $x$ is 1 to begin with, $(1 + 1 = 3)$ is false and $(2(1) + 2 = 3)$ is false \\
+  $\therefore$ the statement will not enter and $x$ will stay 1
+  
+  \item if $(2x + 3 = 5)$ AND $(3x + 4 = 7)$ \textbf{then} $x := x + 1$ \\
+  Since $x$ is 1 to begin with, $(2(1) + 3 = 5)$ is true and $(3(1) + 4 = 7)$ is true \\
+  $\therefore$ $x := x + 1$ will execute and the result of $x$ is 2  
+  
+  \item if $(x + 1 = 2)$ XOR $(x + 2 = 3)$ \textbf{then} $x := x + 1$ \\
+  Since $x$ is 1 to begin with, $(1 + 1 = 2)$ is true and $(1 + 2 = 3)$ is true \\
+  $\therefore$ the statement $x := x+1$ will not execute and $x$ will stay as 1
+  
+  \item if $x < 2$ then $x := x + 1$ \\
+  Since $x$ is 1 to begin with, $1 < 2$ is true \\
+  $\therefore$ the statement will execute and $x$ will result in being 2 \\
+\end{enumerate}
+\end{solution}
+
+\begin{problem} Section 1.2, Exercise 6 on page 22.
+\end{problem}
+\begin{solution}
+  \begin{align*}
+  u: & \quad \text{You can upgrade your operating system} \\
+  b_{32}: & \quad \text{You have a 32-bit processor} \\
+  b_{64}: & \quad \text{You have a 64-bit processor} \\
+  g_1: & \quad \text{Your processor runs at 1 GHz or faster} \\
+  g_2: & \quad \text{Your processor runs at 2 GHz or faster} \\
+  r_1: & \quad \text{Your processor has at least 1 GB RAM} \\
+  r_2: & \quad \text{Your processor has at least 2 GB RAM} \\
+  h_{16}: & \quad \text{You have at least 16 GB free hard disk space} \\
+  h_{32}: & \quad \text{You have at least 32 GB free hard disk space} \\
+  u \rightarrow & \quad (b_{32} \land g_1 \land r_1 \land h_{16}) \lor (b_{64} \land g_2 \land r_2 \land h_{32})
+  \end{align*}
+\end{solution}
+
+\begin{problem} Section 1.2, Exercise 22 on page 23. \textsl{Explain.}
+\end{problem}
+\begin{solution} \ \\
+  Since both $A$ and $B$ both said that they are knights the following conclutions can be drawn: \\
+  $A$ is either a knight or a knave and $B$ is knight or a knave
+\end{solution}
+
+\begin{problem} Section 1.3, Exercise 10 b) and c), page 35.
+\end{problem}
+\begin{solution}
+  \begin{enumerate}[(a)]
+  \item
+    \item $((p \rightarrow q) \land (q \rightarrow r)) \rightarrow (p \rightarrow r)$
+    \begin{center}
+      \begin{tabular}{|c c c || c c c c c|}
+      \hline
+        $p$ & $q$ & $r$ & $p \rightarrow q$ & $q \rightarrow r$ & $p \rightarrow r$ & $(p \rightarrow q) \land (q \rightarrow r)$ & $((p \rightarrow q) \land (q \rightarrow r)) \rightarrow (p \rightarrow r)$ \\
+        \hline
+        F & F & F & T & T & T & T & T \\
+        F & F & T & T & F & T & F & T \\
+        F & T & F & T & T & T & T & T \\
+        F & T & T & T & T & T & T & T \\
+        \hline
+        T & F & F & F & T & F & F & T \\
+        T & F & T & F & T & T & F & T \\
+        T & T & F & T & F & F & F & T \\
+        T & T & T & T & T & T & T & T \\
+        \hline
+      \end{tabular}
+    \end{center}
+    This is the definition of hypothetical syllogism
+    
+    \item $((p \land (p \rightarrow q)) \rightarrow q$
+    \begin{center}
+      \begin{tabular}{|c c|| c c c|}
+      \hline
+        $p$ & $q$ & $p \rightarrow q$ & $p \land (p \rightarrow q)$ & $((p \land (p \rightarrow q)) \rightarrow q$\\
+        \hline
+        F & F & T & F & T \\
+        F & T & T & F & T \\
+        T & F & F & F & T \\
+        T & T & T & T & T \\
+        \hline
+      \end{tabular}
+    \end{center}
+    This is the definition of modus ponens    
+  \end{enumerate}
+\end{solution}
+
+\noindent
+Solve the following two problems by developing a series of logical equivalences, 
+as shown in class and also in Examples~7 and~8 on page 30.
+
+\begin{problem} Show that $(p\rightarrow q) \lor (p\rightarrow r)$ and 
+$p\rightarrow (q\lor r)$ are logically equivalent. 
+\end{problem}
+\begin{solution}
+  \begin{align}
+    (p\rightarrow q) \lor (p\rightarrow r) \equiv& (\neg p \lor q) \lor (\neg p \lor r)& &\textbf{DeMorgan's on given} \\    
+    \equiv &\neg (\neg p \lor q) \land \neg (\neg p \lor r) & &\textbf{DeMorgan's on } (1) \\
+    \equiv &(p \land \neg q) \land ( p \land \neg r) & &\textbf{DeMorgan's on } (2) \\
+    \equiv &p \land \neg q \land \neg r & &\textbf{Simplification on } (3) \\
+    \equiv &p \land \neg ( q \lor r) & &\textbf{DeMorgan's on } (4) \\
+    \equiv &\neg p \lor ( q \lor r) & &\textbf{DeMorgan's on } (5) \\
+    \equiv &p \rightarrow ( q \lor r) & &\textbf{DeMorgan's on } (6)
+  \end{align}
+\end{solution}
+
+\begin{problem} Show that $(p\lor q)\land (\neg p\lor r)\rightarrow (q\lor r)$
+is a tautology.
+\end{problem}
+\begin{solution}
+  \begin{align}
+    (p\lor q)\land (\neg p\lor r)\rightarrow (q\lor r) \\
+    \neg ((p\lor q)\land (\neg p\lor r)) \lor (q\lor r) \\
+    (\neg (p\lor q) \lor  \neg (\neg p\lor r)) \lor (q\lor r) \\
+    (\neg p\land \neg q) \lor (p\land \neg  r) \lor (q\lor r)
+  \end{align}
+\end{solution}
+
+\goodbreak
+\checklist
+\end{document}
