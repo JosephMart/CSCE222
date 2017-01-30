@@ -134,8 +134,17 @@ Therefore, someone in this class has visited the Louvre \\ \ \\
   Q(x):&\; x \text{ has been to France} \\
   R(x):&\; x \text{ has visited the Lourve}
 \end{align*}
-The given premesis are $\exists x(P(x) \land Q(x))$ and 
-
+\begin{align}
+  \exists x(P(x) \land Q(x)& &\textbf{Given} \\
+  \forall x(Q(x) \rightarrow R(x))& &\textbf{Given} \\
+  P(a) \land Q(a)& &\textbf{Exisitential instantiation on (1)} \\
+  Q(a) \rightarrow R(a)& &\textbf{Universal instatiation on (2)} \\
+  P(a)& &\textbf{Simplification on (3)} \\
+  Q(a)& &\textbf{Simplification on (3)} \\
+  R(a)& &\textbf{Modus Ponnes on (4) and (6)} \\
+  P(a) \land R(a)& &\textbf{Conjunction on (5) and (7)} \\
+  \exists x(P(x) \land R(x)) \qed& &\textbf{Existential generation on (8)}
+\end{align}
 \end{solution}
 
 \begin{problem} Section 1.7, Exercise 18, page 91.

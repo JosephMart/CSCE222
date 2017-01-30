@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.17)  29 JAN 2017 22:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.17)  30 JAN 2017 15:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -184,11 +184,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 128--132
 
 [2] [3] (./hw2.aux) ) 
 Here is how much of TeX's memory you used:
- 1339 strings out of 493014
- 15253 string characters out of 6122320
+ 1343 strings out of 493014
+ 15291 string characters out of 6122320
  74210 words of memory out of 5000000
- 4909 multiletter control sequences out of 15000+600000
- 6784 words of font info for 29 fonts, out of 8000000 for 9000
+ 4911 multiletter control sequences out of 15000+600000
+ 7403 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  27i,10n,26p,293b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
@@ -201,7 +201,7 @@ usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texm
 f-dist/fonts/type1/public/amsfonts/latxfont/lasy10.pfb></usr/share/texmf-dist/f
 onts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type
 1/public/amsfonts/symbols/msbm10.pfb>
-Output written on hw2.pdf (3 pages, 123694 bytes).
+Output written on hw2.pdf (3 pages, 126340 bytes).
 PDF statistics:
  58 PDF objects out of 1000 (max. 8388607)
  41 compressed objects within 1 object stream
