@@ -49,7 +49,7 @@ Spring 2017 -- Hyunyoung Lee\\}
 \end{center}
 \problemset{2}
 \duedate{Friday, 2/3/2017 before 11:00 a.m.}{Friday, 2/3/2017}
-\name{Joseph Martinsen}{503}
+\name{(type your name here)}{(type your section here)}
 \begin{resources} (All people, books, articles, web pages, etc.\ that
   have been consulted when producing your answers to this homework.)
 \end{resources}
@@ -60,62 +60,24 @@ Spring 2017 -- Hyunyoung Lee\\}
 \begin{problem} Section 1.4, Exercise 30, page 54. 
 \end{problem}
 \begin{solution}
-\begin{enumerate}[a)]
-  \ \\ $x \in \{1,2,3 \} \quad y \in \{1,2,3\}$
-  \item
-  \begin{align*}
-    \exists x \; P(x,3) \equiv& P(1,3) \lor P(2,3) \lor P(3,3)
-  \end{align*}
-  
-  \item
-  \begin{align*}
-    \forall y \; P(1,y) \equiv& P(1,1) \land P(1,2) \land P(1,3)
-  \end{align*}
-  \item
-  \begin{align*}
-    \exists y \; \neg P(2,y) \equiv& \neg P(2,1) \lor \neg P(2,2) \lor \neg P(2,3)
-  \end{align*}
-  \item
-  \begin{align*}
-    \forall x \; \neg P(x,2) \equiv \neg P(1,2) \land \neg P(2,2) \land \neg P(3,2)
-  \end{align*}
-\end{enumerate}
 \end{solution}
 
 \begin{problem} Section 1.4, Exercise 36, page 55.
 \end{problem}
 \begin{solution}
-\begin{enumerate}[a)] \ \\
-  \item When $x=1, \; 1^2 = 1$ and $x=0, \; 0^2 = 0$ \\
-        $\therefore$ The counter examples are $x=0,1$
-  \item When $x=\sqrt{2}, \; (\sqrt{2})^2 = 2$ and $x=-\sqrt{2}, \; (-\sqrt{2})^2 = 2$ \\
-        $\therefore$ The counter examples are $x=\pm \sqrt{2}$
-  \item When $x=0, \; |0| = 0$ it follows that $0 \ngtr 0$ \\
-        $\therefore$ The counter example is $x=0$
-\end{enumerate}
 \end{solution}
 
 \begin{problem} Section 1.5, Exercise 28 b), c), e), and i), page 67. 
 \textsl{Justify your answer or give a counterexample.}
 \end{problem}
-\begin{solution} \ \\
-b) $\forall x \exists y (x = y^2) $ is \textbf{false} for when $x = -1$ because there is no real number that satisfies $y^2 = -1$ \vspace{8pt} \\
-c) $\exists x \forall y(xy = 0)$ is \textbf{true} for all $y$ when $ x=0$ \vspace{8pt}\\
-e) $\forall x (x \neq 0 \rightarrow \exists y (xy = 1))$ for all $x$ that does not equal 0 there exists a real number $y$ that is equivalent to $\dfrac{1}{x}$ and it can be shown that $x \cdot \dfrac{1}{x} = 1 \therefore$ the statement is \textbf{true} \vspace{8pt}\\
-i) $\forall x \exists y (x + y = 2 \land 2x - y = 1)$ \\
-For when $x = 0$ the equation $x+y=2$ the solution for $y$ is 2. Also for when $x = 0$ the equation $2x-y=1$ the solution for $y$ is -1 \\
-$\therefore$ the statement is \textbf{false} with $x=0$ as a counterexample.
+\begin{solution}
 \end{solution}
 
 \begin{problem} Section 1.5, Exercise 46, page 68.
 \textsl{Justify your answer or give a counterexample.}
 \end{problem}
-\begin{solution}\ \\ $\exists x \forall y \; (x \leq y^2)$
-\begin{enumerate}[a)]
-  \item $\mathbb{D} = \{x,y \in \rm I\!R^+ \}$ for when $x=1$
-  \item $\mathbb{D} = \{x,y \in \mathbb{Z} \} $
-  \item $\mathbb{D} = \{x,y \in \rm{ I\!R} |(x,y) \neq 0 \}$
-\end{enumerate}
+\begin{solution}
+
 \end{solution}
 
 \begin{problem} Section 1.6, Exercise 6, page 78. 
