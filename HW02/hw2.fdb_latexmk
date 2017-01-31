@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1485811546 "hw2.tex" "hw2.pdf" "hw2" 1485811547
+["pdflatex"] 1485811641 "hw2.tex" "hw2.pdf" "hw2" 1485811641
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1484624978 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1484624978 1888031 5317a64a246c13fa560847c387843238 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1484624978 1004 54797486969f23fa377b128694d548df ""
@@ -46,9 +46,9 @@
   "/usr/share/texmf-dist/tex/latex/paralist/paralist.sty" 1484624978 14760 8863d5c390e81d6de55db71ee012f668 ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1484624978 31956 afe4561ef11f8c19b5680fda5e0bdf7f ""
   "/usr/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1484624978 3884428 c07e879cd934189054feacbf5bae3336 ""
-  "hw2.aux" 1485811547 8 a94a2480d3289e625eea47cd1b285758 ""
-  "hw2.tex" 1485811546 6590 10e148f483a757dd86f0b120b36ee3bb ""
+  "hw2.aux" 1485811641 8 a94a2480d3289e625eea47cd1b285758 ""
+  "hw2.tex" 1485811641 6766 4e5840e0351c1d606b4f087b2c6f60a3 ""
   (generated)
+  "hw2.aux"
   "hw2.pdf"
   "hw2.log"
-  "hw2.aux"
