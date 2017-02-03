@@ -1,0 +1,261 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm,latexsym,paralist}
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+\newtheorem*{solution}{Solution}
+\newtheorem*{resources}{Resources}
+
+\newcommand{\name}[2]{\noindent\textbf{Name: #1}\hfill \textbf{Section: #2}}
+\newcommand{\honor}{\noindent On my honor, as an Aggie, I have neither
+  given nor received any unauthorized aid on any portion of the
+  academic work included in this assignment. Furthermore, I have
+  disclosed all resources (people, books, web sites, etc.) that have
+  been used to prepare this homework. \\[2ex]
+ \textbf{Signature:} \underline{\hspace*{10cm}} }
+ 
+\newcommand{\checklist}{\noindent\textbf{Checklist:}
+\begin{compactitem}[$\Box$] 
+\item Did you type in your name and section? 
+\item Did you disclose all resources that you have used? \\
+(This includes all people, books, websites, etc.\ that you have consulted.)
+\item Did you sign that you followed the Aggie Honor Code? 
+\item Did you solve all problems? 
+\item Did you submit the .tex and .pdf files of your homework to the correct link on eCampus?
+\item Did you submit a signed hardcopy of the pdf file in class? 
+\end{compactitem}
+}
+
+\newcommand{\problemset}[1]{\begin{center}\textbf{Problem Set #1}\end{center}}
+\newcommand{\duedate}[2]{\begin{quote}\textbf{Due dates:} Electronic
+    submission of \textsl{yourLastName-yourFirstName-hw2.tex} and 
+    \textsl{yourLastName-yourFirstName-hw2.pdf} files of this homework is due on
+    \textbf{#1} on \texttt{http://ecampus.tamu.edu}. You will see two separate links
+    to turn in the .tex file and the .pdf file separately. Please do not archive or compress the files.  
+    A signed paper copy of the pdf file is due on \textbf{#2} \textsl{at the beginning of class}.
+    \textbf{If any of the three submissions are missing, your work will not be graded.}\end{quote} }
+
+\newcommand{\N}{\mathbf{N}}
+\newcommand{\R}{\mathbf{R}}
+\newcommand{\Z}{\mathbf{Z}}
+
+
+\begin{document}
+\vspace*{-15mm}
+\begin{center}
+{\large
+CSCE 222 [Sections 502, 503] Discrete Structures for Computing\\[.5ex]
+Spring 2017 -- Hyunyoung Lee\\}
+\end{center}
+\problemset{2}
+\duedate{Friday, 2/3/2017 before 11:00 a.m.}{Friday, 2/3/2017}
+\name{Joseph Martinsen}{503}
+\begin{resources} (All people, books, articles, web pages, etc.\ that
+  have been consulted when producing your answers to this homework.) \\ \ \\
+  Pointers a tips were provided by Dr. Lee to me for problems 6 \& 10
+\end{resources}
+\honor
+
+\smallskip
+
+\begin{problem} Section 1.4, Exercise 30, page 54. 
+\end{problem}
+\begin{solution}
+\begin{enumerate}[a)]
+  \ \\ $x \in \{1,2,3 \} \quad y \in \{1,2,3\}$
+  \item
+  \begin{align*}
+    \exists x \; P(x,3) \equiv& P(1,3) \lor P(2,3) \lor P(3,3)
+  \end{align*}
+  
+  \item
+  \begin{align*}
+    \forall y \; P(1,y) \equiv& P(1,1) \land P(1,2) \land P(1,3)
+  \end{align*}
+  \item
+  \begin{align*}
+    \exists y \; \neg P(2,y) \equiv& \neg P(2,1) \lor \neg P(2,2) \lor \neg P(2,3)
+  \end{align*}
+  \item
+  \begin{align*}
+    \forall x \; \neg P(x,2) \equiv \neg P(1,2) \land \neg P(2,2) \land \neg P(3,2)
+  \end{align*}
+\end{enumerate}
+\end{solution}
+
+\begin{problem} Section 1.4, Exercise 36, page 55.
+\end{problem}
+\begin{solution}
+\begin{enumerate}[a)] \ \\
+  \item When $x=1, \; 1^2 = 1$ and $x=0, \; 0^2 = 0$ \\
+        $\therefore$ The counter examples are $x=0,1$
+  \item When $x=\sqrt{2}, \; (\sqrt{2})^2 = 2$ and $x=-\sqrt{2}, \; (-\sqrt{2})^2 = 2$ \\
+        $\therefore$ The counter examples are $x=\pm \sqrt{2}$
+  \item When $x=0, \; |0| = 0$ it follows that $0 \ngtr 0$ \\
+        $\therefore$ The counter example is $x=0$
+\end{enumerate}
+\end{solution}
+
+\begin{problem} Section 1.5, Exercise 28 b), c), e), and i), page 67. 
+\textsl{Justify your answer or give a counterexample.}
+\end{problem}
+\begin{solution} \ \\
+b) $\forall x \exists y (x = y^2) $ is \textbf{false} for when $x = -1$ because there is no real number that satisfies $y^2 = -1$ \vspace{8pt} \\
+c) $\exists x \forall y(xy = 0)$ is \textbf{true} for all $y$ when $ x=0$ \vspace{8pt}\\
+e) $\forall x (x \neq 0 \rightarrow \exists y (xy = 1))$ for all $x$ that does not equal 0 there exists a real number $y$ that is equivalent to $\dfrac{1}{x}$ and it can be shown that $x \cdot \dfrac{1}{x} = 1 \therefore$ the statement is \textbf{true} \vspace{8pt}\\
+i) $\forall x \exists y (x + y = 2 \land 2x - y = 1)$ \\
+For when $x = 0$ the equation $x+y=2$ the solution for $y$ is 2. Also for when $x = 0$ the equation $2x-y=1$ the solution for $y$ is -1 \\
+$\therefore$ the statement is \textbf{false} with $x=0$ as a counterexample.
+\end{solution}
+
+\begin{problem} Section 1.5, Exercise 46, page 68.
+\textsl{Justify your answer or give a counterexample.}
+\end{problem}
+\begin{solution}\ \\ $\exists x \forall y \; (x \leq y^2)$
+\begin{enumerate}[a)]
+  \item $\mathbb{D} = \{x,y \in \rm I\!R^+ \}$ is \textbf{true} for when $x=1$, all $y$'s in the domain satisfy the statement
+  \item $\mathbb{D} = \{x,y \in \mathbb{Z} \} $ is \textbf{true} for when $x=1$ or $x=-1$
+  \item $\mathbb{D} = \{x,y \in \rm{ I\!R} |(x,y) \neq 0 \}$ is \textbf{true} for when $x=1$ and assuming that non-zero means $y\leq 1$
+\end{enumerate}
+\end{solution}
+
+\begin{problem} Section 1.6, Exercise 6, page 78. 
+\end{problem}
+\begin{solution}
+\begin{align*}
+  P:& \text{ It rains} \\
+  Q:& \text{ It is foggy} \\
+  R:& \text{ Sailing race will be held} \\
+  S:& \text{ Lifesaving demonstration occurs} \\
+  T:& \text{ Trophy is awarded}
+\end{align*}
+\setcounter{equation}{0}
+\begin{align}
+  (\neg P \lor \neg Q) \rightarrow (R \land S)& &\textbf{Given} \\
+  R \rightarrow T& & \textbf{Given} \\
+  \neg T& &\textbf{Given} \\
+  \neg R& &\textbf{Modus Tollens on (2) and (3)} \\
+  \neg(R \land S) \rightarrow \neg(\neg P \lor \neg Q)& &\textbf{Contrapositive of (1)} \\
+  (\neg R \lor \neg S) \rightarrow (P \land Q)& &\textbf{By DeMorgan's (5)} \\
+  \neg R \lor \neg S& &\textbf{Addition of (4) and }\neg S \\
+  P \land Q& &\textbf{By Modus Ponnes on (6) and (7)} \\
+  P& &\textbf{Simplification on (8)}
+\end{align}
+$\therefore$ It will rain and there will be no race :(
+\end{solution}
+
+\begin{problem} Section 1.6, Exercise 14 d), page 79.  
+\end{problem}
+\begin{solution}\ \\
+There is someone in this class who has been to France. \\
+Everyone who goes to France visits the Louvre. \\
+Therefore, someone in this class has visited the Louvre \\ \ \\
+\begin{align*}
+  P(x):&\; x \text{ is in this class} \\
+  Q(x):&\; x \text{ has been to France} \\
+  R(x):&\; x \text{ has visited the Lourve}
+\end{align*}
+\setcounter{equation}{0}
+\begin{align}
+  \exists x(P(x) \land Q(x)& &\textbf{Given} \\
+  \forall x(Q(x) \rightarrow R(x))& &\textbf{Given} \\
+  P(a) \land Q(a)& &\textbf{Exisitential instantiation on (1)} \\
+  Q(a) \rightarrow R(a)& &\textbf{Universal instatiation on (2)} \\
+  P(a)& &\textbf{Simplification on (3)} \\
+  Q(a)& &\textbf{Simplification on (3)} \\
+  R(a)& &\textbf{Modus Ponnes on (4) and (6)} \\
+  P(a) \land R(a)& &\textbf{Conjunction on (5) and (7)} \\
+  \exists x(P(x) \land R(x)) \qed& &\textbf{Existential generation on (8)}
+\end{align}
+\end{solution}
+
+\begin{problem} Section 1.7, Exercise 18, page 91.
+\end{problem}
+\begin{solution} \ \\
+\begin{align*}
+  P:&\; 3n + 2 \text{ is even} \\
+  Q:& \; n \text{ is even} \\
+  P &\rightarrow Q
+\end{align*}
+If $n \in \mathbb{Z}$ and  3n + 2 is even, $n$ is even
+\begin{enumerate}
+  \item a proof by contraposition $\lnot Q \rightarrow \lnot P$ \\ \ \\
+  If n is odd, then 3n + 2 is odd \\
+  Since n is assumed to be odd, it must be of the form $n = 2k + 1$ where $k \in \mathbb{Z}$
+  \begin{align*}
+    3n + 2 \\
+    3(2k + 1) + 2 \\
+    6k + 3 + 2 \\
+    6k + 4 + 1 \\
+    2(3k + 2) + 1 \\
+    2m + 1& \quad \textbf{where $m = 3k + 2$}
+  \end{align*}
+  2m + 1 is odd so it follows that If $n \in \mathbb{Z}$ and  3n + 2 is even, $n$ is even by contraposition
+
+  \item a proof by contradiction $P \land \lnot Q$ \\ \ \\
+  Assume 3n + 2 is even but n is odd. Since n is odd it must be in the form of n = 2k + 1 where $k \in \mathbb{Z}$
+
+    \begin{align*}
+    3n + 2 \\
+    3(2k + 1) + 2 \\
+    6k + 3 + 2 \\
+    6k + 4 + 1 \\
+    2(3k + 2) + 1 \\
+    2m + 1& \quad \textbf{where $m = 3k + 2$}
+  \end{align*}
+  2m + 1 is odd which contradicts the assumption that 3n + 2 is even so it follows that If $n \in \mathbb{Z}$ and  3n + 2 is even, $n$ is even by contradiction \qed  
+\end{enumerate}
+\end{solution}
+
+\begin{problem} Section 1.7, Exercise 22, page 91.  \textsl{Prove by contradiction.}
+\end{problem}
+\begin{solution}
+Assume that if you pick three socks from a drawer containing just blue socks and black socks, that you will not get a pair of blue socks or a pair of black socks. Here the domain of socks within the drawer are \{blue, black\}. For the first two picks, the socks must be of the order [blue, black] or [black, blue]. If it was any other case, a pair of socks would be obtained. For the third pick, there are two options. One option occurs when the third sock is black, which results in [blue, black,black] or [black, blue, black]. The second option occurs when the third sock is blue, which results in [blue, black, blue] or [black, blue, blue]. Both of these options result in a pair of socks occurring which contradicts the premise that no pairs would occur \\
+$\therefore$ by proof by contradiction and some pigeonhole principle, you will have a pair of blue or a pair of black socks when picking from this drawer. \qed
+\end{solution}
+
+\begin{problem} Section 1.7, Exercise 24, page 91.  \textsl{Prove by contradiction.}
+\end{problem}
+\begin{solution}
+Assume no more than two days of any 25 days chosen must fall in the same month of the year. For the first 24 days chosen that still satisfy this premise is of the order: 2 days in Jan, 2 days in Feb, 2 days in Mar, 2 days April, 2 days in May, 2 days in June, 2 days in July, 2 days in Aug, 2 days in Sept, 2 days in Oct, 2 days in Nov, and 2 days in Dec. There are 12 options for the 25th day to be chosen from. Each of these options will result in a month having 3 chosen days which contradicts the premise. \\
+$\therefore$ by proof by contradiction, at least three of any 25 days chosen must fall in the same month of the year. \qed
+\end{solution}
+
+\begin{problem} Let $n>1$ be an integer. \textsl{Prove by contradiction} that 
+if $n$ is a perfect square, then $n+3$ cannot be a perfect square. 
+\end{problem}
+\begin{solution}
+\begin{align*}
+  D &= \{n \in \mathbb{Z} | n > 1\} \\
+  P:& \; n \text{ is a perfect square} \\
+  Q:&\;  n+3 \text{ is not a perfect square} \\
+  P &\rightarrow Q
+\end{align*}
+Using proof by contradiction $P \land \lnot Q$ \\
+Assume $n$ is a perfect square but $n+3$ is a perfect square. Since $n$ and $n+3$ are perfect squares, there must exists an $x$ and $y$ that are integers greater than 1 such that $n=x^2$ and $n+3=y^2$.
+\setcounter{equation}{0}
+\begin{align}
+  n &= x^2 \\
+  n + 3 &= y^2 \\
+  n+3 &> n \\
+  y^2 &> x^2 & \textbf{it follows that} \\
+  y &> x \\
+  y &\geq x + 1 &\textbf{since $x,y$ are integers}\\
+  n+3 &\geq (x+1)^2 & \textbf{from (2) and (6)} \\
+  n+3 &\geq x^2 + 2x + 1 & \textbf{expand (7)} \\
+  x^2 + 3 &\geq x^2 + 2x + 1 &\textbf{by (1) and (8)} \\
+  3 &\geq 2x + 1 &\textbf{simplify of (9)} \\
+  x &\leq 1 &\textbf{simplify of (10)} \\
+  y &\geq 1 + 1 &\textbf{by (6) and (11)} \\
+  y^2 &\geq 4 &\textbf{squaring (12)} \\
+  n + 3 &\geq 4 &\textbf{by (2) and (13)} \\
+  n &\geq 1 &\textbf{simplify of (14)} \\
+  x^2 &\leq 1^2 &\textbf{square of (11)} \\
+  n^2 &\leq 1 &\textbf{by (15) and (1)}
+\end{align}
+Lines 15 and 17 are contradictions thus, the original premise is true \qed
+\end{solution}
+
+\goodbreak
+\checklist
+\end{document}
