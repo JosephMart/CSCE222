@@ -50,8 +50,9 @@ Spring 2017 -- Hyunyoung Lee\\}
 \problemset{1}
 \duedate{Friday, 1/27/2017 before 11:00 a.m.}{Friday, 1/27/2017}
 \name{Joseph Martinsen}{503}
-\begin{resources} (All people, books, articles, web pages, etc.\ that
-  have been consulted when producing your answers to this homework.)
+\begin{resources}
+  The Textbook \textit{Discrete Mathematics and Its Applications} \\
+  Also, familiar with the topics because I am retaking the course...
 \end{resources}
 \honor
 
@@ -186,10 +187,49 @@ Spring 2017 -- Hyunyoung Lee\\}
 \begin{problem} Section 1.1, Exercise 40 on page 16.
 \end{problem}
 \begin{solution} \ \\
-  Explain, without using a truth table, why $(p \lor \neg q) \land
+\noindent Explain, without using a truth table, why $(p \lor \neg q) \land
 (q \lor \neg r) \land (r \lor \neg p)$ is true when $p$, $q$, and $r$ have the
 same truth value and it is false otherwise. \\
 
+\noindent\textbf{Case 1: }If p,q, and r are all T, then the results is 
+\begin{equation*}
+\begin{gathered}
+  (T \lor \neg T) \land (T \lor \neg T) \land (T \lor \neg T) \\
+  T \land T \land T\\
+  T
+\end{gathered}
+\end{equation*}
+
+\noindent\textbf{Case 2: }If p, q, and r are all F, then the result is
+\begin{equation*}
+\begin{gathered}
+  (F \lor \neg F) \land (F \lor \neg F) \land (F \lor \neg F) \\
+  T \land T \land T\\
+  T
+\end{gathered}
+\end{equation*}
+
+\noindent\textbf{Case 3: }If p is T and q is F, r will be set to F, then the reulst is
+\begin{equation*}
+\begin{gathered}
+(T \lor \neg F) \land (T \lor \neg F) \land (F \lor \neg T) \\
+T \land T \land F\\
+F
+\end{gathered}
+\end{equation*}
+
+Regardless of r, the result is the same.
+
+\noindent\textbf{Case 4: }If p is F and q is T, r will be set to F, then the reulst is
+\begin{equation*}
+\begin{gathered}
+(F \lor \neg T) \land (T \lor \neg F) \land (F \lor \neg F) \\
+F \land T \land T\\
+F
+\end{gathered}
+\end{equation*}
+\noindent Regardless of r, the result is the same. \\
+\noindent$\therefore$ If p, q, and r are not the same truth value, the proposition will result in false.  
 \end{solution}
 
 \begin{problem} Section 1.1, Exercise 42 on page 16. \textsl{Explain.}
@@ -225,10 +265,10 @@ same truth value and it is false otherwise. \\
   u: & \quad \text{You can upgrade your operating system} \\
   b_{32}: & \quad \text{You have a 32-bit processor} \\
   b_{64}: & \quad \text{You have a 64-bit processor} \\
-  g_1: & \quad \text{Your processor runs at 1 GHz or faster} \\
-  g_2: & \quad \text{Your processor runs at 2 GHz or faster} \\
-  r_1: & \quad \text{Your processor has at least 1 GB RAM} \\
-  r_2: & \quad \text{Your processor has at least 2 GB RAM} \\
+  g_1:    & \quad \text{Your processor runs at 1 GHz or faster} \\
+  g_2:    & \quad \text{Your processor runs at 2 GHz or faster} \\
+  r_1:    & \quad \text{Your processor has at least 1 GB RAM} \\
+  r_2:    & \quad \text{Your processor has at least 2 GB RAM} \\
   h_{16}: & \quad \text{You have at least 16 GB free hard disk space} \\
   h_{32}: & \quad \text{You have at least 32 GB free hard disk space} \\
   u \rightarrow & \quad (b_{32} \land g_1 \land r_1 \land h_{16}) \lor (b_{64} \land g_2 \land r_2 \land h_{32})
@@ -292,27 +332,36 @@ as shown in class and also in Examples~7 and~8 on page 30.
 $p\rightarrow (q\lor r)$ are logically equivalent. 
 \end{problem}
 \begin{solution}
-  \begin{align}
-    (p\rightarrow q) \lor (p\rightarrow r) \equiv& (\neg p \lor q) \lor (\neg p \lor r)& &\textbf{DeMorgan's on given} \\    
-    \equiv &\neg (\neg p \lor q) \land \neg (\neg p \lor r) & &\textbf{DeMorgan's on } (1) \\
-    \equiv &(p \land \neg q) \land ( p \land \neg r) & &\textbf{DeMorgan's on } (2) \\
-    \equiv &p \land \neg q \land \neg r & &\textbf{Simplification on } (3) \\
-    \equiv &p \land \neg ( q \lor r) & &\textbf{DeMorgan's on } (4) \\
-    \equiv &\neg p \lor ( q \lor r) & &\textbf{DeMorgan's on } (5) \\
-    \equiv &p \rightarrow ( q \lor r) & &\textbf{DeMorgan's on } (6)
-  \end{align}
+  \begin{align*}
+    (p\rightarrow q) \lor (p\rightarrow r) &\equiv (\neg p \lor q) \lor (\neg p \lor r) &\textbf{By $A \rightarrow B \equiv \neg A \lor B$} \\
+  &\equiv \neg p \lor \neg p \lor q \lor r &\textbf{By Associative Laws} \\
+      &\equiv \neg p \lor q \lor r & \textbf{By Simplification} \\
+      &\equiv \neg p \lor (q \lor r) &\textbf{By Associative Laws} \\
+      &\equiv p \rightarrow (q \lor r) \qed &\textbf{By $\neg A \lor B \equiv A \rightarrow B$}
+  \end{align*}
 \end{solution}
 
 \begin{problem} Show that $(p\lor q)\land (\neg p\lor r)\rightarrow (q\lor r)$
 is a tautology.
 \end{problem}
 \begin{solution}
-  \begin{align}
-    (p\lor q)\land (\neg p\lor r)\rightarrow (q\lor r) \\
-    \neg ((p\lor q)\land (\neg p\lor r)) \lor (q\lor r) \\
-    (\neg (p\lor q) \lor  \neg (\neg p\lor r)) \lor (q\lor r) \\
-    (\neg p\land \neg q) \lor (p\land \neg  r) \lor (q\lor r)
-  \end{align}
+  \begin{align*}
+    (p\lor q)\land (\neg p\lor r)\rightarrow (q\lor r) &\equiv
+    \neg((p\lor q)\land (\neg p\lor r))\lor (q\lor r) &
+    \textbf{By $A \rightarrow B \equiv \neg A \lor B$} \\
+    &\equiv (\neg(p \lor q) \lor \neg(\neg p \lor r)) \lor (q\lor r) & \textbf{By DeMorgan's} \\
+    &\equiv (\neg p \land \neg q) \lor (p \land \neg r) \lor (q \lor r) & \textbf{By DeMorgan's} \\
+    &\equiv (\neg p \land \neg q) \lor q \lor (p \land \neg r) \lor r & \textbf{By Associative Laws} \\
+    & \equiv ((\neg p \lor q) \land (\neg q \lor q)) \lor (p \land \neg r) \lor r & \textbf{By Distributive Laws} \\
+    & \equiv ((\neg p \lor q) \land T) \lor (p \land \neg r) \lor r & \textbf{By $\neg A \lor A \equiv T$} \\
+    & \equiv \neg p \lor q \lor (p \land \neg r) \lor r & \textbf{By $A \land T \equiv A$} \\
+    & \equiv \neg p \lor q \lor ((p \lor r) \land ( r \lor \neg r)) & \textbf{By Distributive Laws} \\
+    & \equiv \neg p \lor q \lor ((p \lor r) \land T) & \textbf{By $\neg A \lor A \equiv T$} \\
+    & \equiv \neg p \lor q \lor p \lor r & \textbf{By $A \land T \equiv A$} \\
+    &\equiv T \lor q \lor r & \textbf{By $\neg A \lor A \equiv T$} \\
+    &\equiv T \lor r & \textbf{By $T \lor A \equiv T$} \\
+    &\equiv T \qed & \textbf{By $T \lor A \equiv T$}
+  \end{align*}
 \end{solution}
 
 \goodbreak
