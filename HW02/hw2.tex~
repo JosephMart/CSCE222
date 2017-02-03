@@ -121,6 +121,26 @@ $\therefore$ the statement is \textbf{false} with $x=0$ as a counterexample.
 \begin{problem} Section 1.6, Exercise 6, page 78. 
 \end{problem}
 \begin{solution}
+\begin{align*}
+  P:& \text{ It rains} \\
+  Q:& \text{ It is foggy} \\
+  R:& \text{ Sailing race will be held} \\
+  S:& \text{ Lifesaving demonstration occurs} \\
+  T:& \text{ Trophy is awarded}
+\end{align*}
+\setcounter{equation}{0}
+\begin{align}
+  (\neg P \lor \neg Q) \rightarrow (R \land S)& &\textbf{Given} \\
+  R \rightarrow T& & \textbf{Given} \\
+  \neg T& &\textbf{Given} \\
+  \neg R& &\textbf{Modus Tollens on (2) and (3)} \\
+  \neg(R \land S) \rightarrow \neg(\neg P \lor \neg Q)& &\textbf{Contrapositive of (1)} \\
+  (\neg R \lor \neg S) \rightarrow (P \land Q)& &\textbf{By DeMorgan's (5)} \\
+  \neg R \lor \neg S& &\textbf{Addition of (4) and }\neg S \\
+  P \land Q& &\textbf{By Modus Ponnes on (6) and (7)} \\
+  P& &\textbf{Simplification on (8)}
+\end{align}
+$\therefore$ It will rain and there will be no race :(
 \end{solution}
 
 \begin{problem} Section 1.6, Exercise 14 d), page 79.  
@@ -134,6 +154,7 @@ Therefore, someone in this class has visited the Louvre \\ \ \\
   Q(x):&\; x \text{ has been to France} \\
   R(x):&\; x \text{ has visited the Lourve}
 \end{align*}
+\setcounter{equation}{0}
 \begin{align}
   \exists x(P(x) \land Q(x)& &\textbf{Given} \\
   \forall x(Q(x) \rightarrow R(x))& &\textbf{Given} \\
@@ -149,28 +170,89 @@ Therefore, someone in this class has visited the Louvre \\ \ \\
 
 \begin{problem} Section 1.7, Exercise 18, page 91.
 \end{problem}
-\begin{solution} Prove that if n is an integer and 3n + 2 is even, then n is even using
+\begin{solution} \ \\
+\begin{align*}
+  P:&\; 3n + 2 \text{ is even} \\
+  Q:& \; n \text{ is even} \\
+  P &\rightarrow Q
+\end{align*}
+If $n \in \mathbb{Z}$ and  3n + 2 is even, $n$ is even
 \begin{enumerate}
-  \item a proof by contraposition.
-  
-  \item a proof by contradiction
+  \item a proof by contraposition $\lnot Q \rightarrow \lnot P$ \\ \ \\
+  If n is odd, then 3n + 2 is odd \\
+  Since n is assumed to be odd, it must be of the form $n = 2k + 1$ where $k \in \mathbb{Z}$
+  \begin{align*}
+    3n + 2 \\
+    3(2k + 1) + 2 \\
+    6k + 3 + 2 \\
+    6k + 4 + 1 \\
+    2(3k + 2) + 1 \\
+    2m + 1& \quad \textbf{where $m = 3k + 2$}
+  \end{align*}
+  2m + 1 is odd so it follows that If $n \in \mathbb{Z}$ and  3n + 2 is even, $n$ is even by contraposition
+
+  \item a proof by contradiction $P \land \lnot Q$ \\ \ \\
+  Assume 3n + 2 is even but n is odd. Since n is odd it must be in the form of n = 2k + 1 where $k \in \mathbb{Z}$
+
+    \begin{align*}
+    3n + 2 \\
+    3(2k + 1) + 2 \\
+    6k + 3 + 2 \\
+    6k + 4 + 1 \\
+    2(3k + 2) + 1 \\
+    2m + 1& \quad \textbf{where $m = 3k + 2$}
+  \end{align*}
+  2m + 1 is odd which contradicts the assumption that 3n + 2 is even so it follows that If $n \in \mathbb{Z}$ and  3n + 2 is even, $n$ is even by contradiction \qed  
 \end{enumerate}
 \end{solution}
 
 \begin{problem} Section 1.7, Exercise 22, page 91.  \textsl{Prove by contradiction.}
 \end{problem}
 \begin{solution}
+Assume that if you pick three socks from a drawer containing just blue socks and black socks, that you will not get a pair of blue socks or a pair of black socks. Here the domain of socks within the drawer are \{blue, black\}. For the first two picks, the socks must be of the order [blue, black] or [black, blue]. If it was any other case, a pair of socks would be obtained. For the third pick, there are two options. One option occurs when the third sock is black, which results in [blue, black,black] or [black, blue, black]. The second option occurs when the third sock is blue, which results in [blue, black, blue] or [black, blue, blue]. Both of these options result in a pair of socks occurring which contradicts the premise that no pairs would occur \\
+$\therefore$ by proof by contradiction and some pigeonhole principle, you will have a pair of blue or a pair of black socks when picking from this drawer. \qed
 \end{solution}
 
 \begin{problem} Section 1.7, Exercise 24, page 91.  \textsl{Prove by contradiction.}
 \end{problem}
 \begin{solution}
+Assume no more than two days of any 25 days chosen must fall in the same month of the year. For the first 24 days chosen that still satisfy this premise is of the order: 2 days in Jan, 2 days in Feb, 2 days in Mar, 2 days April, 2 days in May, 2 days in June, 2 days in July, 2 days in Aug, 2 days in Sept, 2 days in Oct, 2 days in Nov, and 2 days in Dec. There are 12 options for the 25th day to be chosen from. Each of these options will result in a month having 3 chosen days which contradicts the premise. \\
+$\therefore$ by proof by contradiction, at least three of any 25 days chosen must fall in the same month of the year. \qed
 \end{solution}
 
 \begin{problem} Let $n>1$ be an integer. \textsl{Prove by contradiction} that 
 if $n$ is a perfect square, then $n+3$ cannot be a perfect square. 
 \end{problem}
 \begin{solution}
+\begin{align*}
+  D &= \{n \in \mathbb{Z} | n > 1\} \\
+  P:& \; n \text{ is a perfect square} \\
+  Q:&\;  n+3 \text{ is not a perfect square} \\
+  P &\rightarrow Q
+\end{align*}
+Using proof by contradiction $P \land \lnot Q$ \\
+Assume $n$ is a perfect square but $n+3$ is a perfect square. Since $n$ and $n+3$ are perfect squares, there must exists an $x$ and $y$ that are integers greater than 1 such that $n=x^2$ and $n+3=y^2$.
+\setcounter{equation}{0}
+\begin{align}
+  n &= x^2 \\
+  n + 3 &= y^2 \\
+  n+3 &> n \\
+  y^2 &> x^2 & \textbf{it follows that} \\
+  y &> x \\
+  y &\geq x + 1 &\textbf{since $x,y$ are integers}\\
+  n+3 &\geq (x+1)^2 & \textbf{from (2) and (6)} \\
+  n+3 &\geq x^2 + 2x + 1 & \textbf{expand (7)} \\
+  x^2 + 3 &\geq x^2 + 2x + 1 &\textbf{by (1) and (8)} \\
+  3 &\geq 2x + 1 &\textbf{simplify of (9)} \\
+  x &\leq 1 &\textbf{simplify of (10)} \\
+  y &\geq 1 + 1 &\textbf{by (6) and (11)} \\
+  y^2 &\geq 4 &\textbf{squaring (12)} \\
+  n + 3 &\geq 4 &\textbf{by (2) and (13)} \\
+  n &\geq 1 &\textbf{simplify of (14)} \\
+  x^2 &\leq 1^2 &\textbf{square of (11)} \\
+  n^2 &\leq 1 &\textbf{by (15) and (1)}
+\end{align}
+Lines 15 and 17 are contradictions thus, the original premise is true \qed
 \end{solution}
 
 \goodbreak
