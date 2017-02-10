@@ -99,15 +99,47 @@ $A \subset B$ if and only if every element of $A$ is also a member of $B$. If $A
 
 \begin{problem} (\textbf{20 Points}) Section 2.2, Exercise 16, page 136.
 \end{problem}
-\begin{solution}
+\begin{solution}\ \\
 \begin{enumerate}[a)]
   \item
   \begin{align*}
-    A \cap B \equiv& \{x | x \in (A \cap B) \} &\textbf{By instantiation} \\
-    \equiv& x \in A \land x \in B &\textbf{By Distributive property} \\
-    \equiv& x \in A &\textbf{By Simplification} \\
-    \equiv& A &\textbf{By generalization}  
+    A \cap B \equiv& \{x | x \in (A \cap B) \} &\textbf{By definition} \\
+    \equiv& x \text{ must be members of $A$ and $B$}\\
+    \subseteq& x \text{ is a member of $A$} &\textbf{This is a proper subset of the previous}\\
+    \subseteq& A &\textbf{By generalization} \qed
   \end{align*}
+  \item
+  \begin{align*}
+    A &= \{x \in A \} & \textbf{By instatiation} \\
+    &\subseteq \{x \in A \lor x \in B\} &\textbf{By addition} \\
+    &\subseteq \{x \in A \cup B \} &\textbf{By combination} \\
+    &\subseteq \{A \cup B \} &\textbf{By generalization} \qed
+  \end{align*}
+  \item
+  \begin{align*}
+    A - B &= \{x \in (A - B) \} \\
+    &= \{x \in A \land x \notin B \} \\
+    &\subseteq \{x \in A \} \\
+    &\subseteq A \qed
+    \end{align*}
+    \item
+    \begin{align*}
+      A \cap (B - A) &= A \cap \{x \in B \land x \notin A \} \\
+      &= A \cap \{x \in B \land x \in \bar A \} \\
+      &= A \cap (B \cap \bar A) \\
+      &= (A \cap \bar A) \cap B &\textbf{By communative property} \\
+      &= \emptyset \cap B \\
+      &= \emptyset
+    \end{align*}
+    \item
+    \begin{align*}
+      A \cup (B - A) &= A \cup \{x \in B \land x \notin A \} \\
+      &= A \cup \{x \in B \land x \in \bar A \} \\
+      &= A \cup (B \cap \bar A) \\
+      &= (A \cup B) \cap (A \cup \bar A) &\textbf{By distribution} \\
+      &= (A \cup B) \cap U &\textbf{$A \cup \bar A =$ Power set} \\
+      &= A \cup B &\textbf{By $A \cap U = A$}
+    \end{align*}
 \end{enumerate}
 \end{solution}
 
@@ -115,6 +147,14 @@ $A \subset B$ if and only if every element of $A$ is also a member of $B$. If $A
 [Hint: Start out by expanding the definition of $(B - C)$.]
 \end{problem}
 \begin{solution}
+\begin{align*}
+  A \cap (B - C) &= A \cap (x \in B | x \notin C ) \\
+  &= A \cap (B \cap \bar C) \\
+  &= (A \cap B) \cap \bar C &\textbf{By communative property} \\
+  &= \{x \in (A \cap B) | x \in \bar C \} \\
+  &= \{x \in (A \cap B) | x \notin C \} \\
+  &= (A \cap B) - C \qed
+\end{align*}
 \end{solution}
 
 \begin{problem} Section 2.3, Exercise 12, page 153. \textsl{Explain.} 
@@ -170,6 +210,16 @@ $A \subset B$ if and only if every element of $A$ is also a member of $B$. If $A
   \item
   There does not exists any integer solution that satisfy $m^2 - n^2 = 2 \therefore$ this function is not onto
   \item
+  \begin{equation}
+    k = m + n + 1
+  \end{equation}
+  $k$ is always $k \in \mathbb{Z}$ because any linear transformations of integers is an integer
+  \begin{equation}
+    f(a,b) = a + b + 1 = p
+  \end{equation}
+  $\therefore$ this function is onto for any integer value
+  \item
+  If $m = 0$, $f(0,n) = - |n|$. This equation covers all negative integer values $<0$. If $n=0$, $f(m,0) = |m|$. This equation covers all positive integer values. If $m=n$, $f(m,m) = |m| - |m| = 0$. This covers 0. $\therefore$ this function is onto for any integer value 
   
 \end{enumerate}
 \end{solution}
@@ -177,6 +227,14 @@ $A \subset B$ if and only if every element of $A$ is also a member of $B$. If $A
 \begin{problem} Section 2.3, Exercise 50, page 154. 
 \end{problem}
 \begin{solution}
+\begin{align*}
+  \left \lceil x + m \right \rceil = \lceil x \rceil + m \\
+  \text{Suppose }\lceil x \rceil = n \\
+  \text{It follows } n-1 < x \leq n \\
+  \text{Add $m$, } n-1 +m < x + m \leq n + m \\
+  \text{By the ceil function definition } \lceil x + m \rceil = n + m \\
+  \text{By $\lceil x \rceil = n$, }\lceil x + m \rceil = \lceil x \rceil + m \qed
+\end{align*}
 \end{solution}
 
 \begin{problem} Section 2.3, Exercise 58, page 154. \textsl{Explain.}
