@@ -52,6 +52,7 @@ Spring 2017 -- Hyunyoung Lee\\}
 \name{Joseph Martinsen}{503}
 \begin{resources} (All people, books, articles, web pages, etc.\ that
   have been consulted when producing your answers to this homework.)
+  https://www.youtube.com/watch?v=Uzlj6N5OYcM
 \end{resources}
 \honor
 
@@ -59,22 +60,55 @@ Spring 2017 -- Hyunyoung Lee\\}
 
 \begin{problem} Section 2.1, Exercise 24, page 126. \textsl{Explain.}
 \end{problem}
-\begin{solution}
+\begin{solution} Cardinality of set $|A| = k$ and of power set is $|P| = 2^k$ given by lecture and book
+\begin{enumerate}[a)]
+  \item The power set of every set contains the empty set. A power set then cannot be empty.$\therefore$ this is not a power set
+  
+  \item Consider in this case $A = \{a\}$\\
+  $|A| = 1$\\
+  $|P(A)| = 2^1 = 2$ consisting of $\{a\}$ and the empty set. $\therefore$ the given $\{\emptyset, \{a\}\}$ is the power set of $\{a\}$
+  
+  \item The given power set contains 3 elements. There are no number of elements $k$ that satisfy $2^k = 3$ where $|A| = k$ $\therefore$ this cannot be a power set
+  
+  \item Consider in this case $A = \{a,b\}$ \\
+  $|A| = 2$ so it follows that power set must contain $2^2 = 4$ elements. \\
+  These elements are $\{a,b\}, \{a\}, \{b\}, \emptyset \therefore$ the given must be the power set of $\{a,b\}$
+\end{enumerate}
 \end{solution}
 
 \begin{problem} Show that a set which is a subset of every set must be the empty set.
 \end{problem}
 \begin{solution}
+$A \subset B$ if and only if every element of $A$ is also a member of $B$. If $A$ is the empty set, meaning that A has no members within its set, all 0 members of $A$ are also all members of $B$, no mater what members of $B$ has. \\$\therefore$ the empty set is a subset of every set.
 \end{solution}
 
 \begin{problem} Let $A$ and $B$ be sets. Show that $P(A)=P(B)$ implies $A=B$.
 \end{problem}
 \begin{solution}
+\begin{align*}
+  (P(A)=P(B))&\rightarrow(A=B) \\
+\end{align*}
+% Assume $A \neq B$. There must be a be an $x \in A$ that is $x \notin B$. It directly follows that $\{x\} \in P(A)$ and $\{x\} \notin P(B)$. This results
+\begin{align*}
+  P(A) &= P(B) \\
+  \forall C(C \in P(A) &\land C \in P(B)) &\textbf{Universal instantiation} \\
+  \forall C(C \subseteq A &\land C  B) \\
+  A &= B
+\end{align*}
 \end{solution}
 
 \begin{problem} (\textbf{20 Points}) Section 2.2, Exercise 16, page 136.
 \end{problem}
 \begin{solution}
+\begin{enumerate}[a)]
+  \item
+  \begin{align*}
+    A \cap B \equiv& \{x | x \in (A \cap B) \} &\textbf{By instantiation} \\
+    \equiv& x \in A \land x \in B &\textbf{By Distributive property} \\
+    \equiv& x \in A &\textbf{By Simplification} \\
+    \equiv& A &\textbf{By generalization}  
+  \end{align*}
+\end{enumerate}
 \end{solution}
 
 \begin{problem} Show that $A\cap (B - C) = (A\cap B) - C$.
@@ -86,11 +120,58 @@ Spring 2017 -- Hyunyoung Lee\\}
 \begin{problem} Section 2.3, Exercise 12, page 153. \textsl{Explain.} 
 \end{problem}
 \begin{solution}
+\begin{enumerate}[a)]
+  \item 
+  \begin{align*}
+    f(a) &= f(b) \\
+    a-1 &= b-1 \\
+    a &= b
+  \end{align*}
+  $\therefore$ this function is one-to-one
+  
+  \item
+  \begin{align*}
+    f(a) &= f(b) \\
+    a^2 + 1 &= b^2 + 1 \\
+    a^2 &= b^2 \\
+    a &= \pm b
+  \end{align*}
+  $\therefore$ this function is NOT one-to-one
+  \item
+  \begin{align*}
+    f(a) &= f(b) \\
+    a^3 &= b^3 \\
+    a &= b \\
+  \end{align*}
+  For all this holds $\therefore$ this function is one-to-one
+  \item
+  \begin{align*}
+    f(2) = \left \lceil \dfrac{2}{2} \right\rceil = 1 \\
+    f(1) = \left \lceil \dfrac{1}{2} \right\rceil = 1
+  \end{align*}
+  $\therefore$ this function is not one-to-one
+\end{enumerate}
 \end{solution}
 
 \begin{problem} Section 2.3, Exercise 14 a), b), c) and d), page 153. \textsl{Explain.}
 \end{problem}
-\begin{solution}
+\begin{solution}\ \\
+\begin{enumerate}[a)]
+  \item
+  \begin{equation}
+    k = 2m - n
+  \end{equation}
+  $k$ is always $k \in \mathbb{Z}$ because any linear transformations of integers is an integer
+  \begin{equation}
+    f(m,n) = 2m - s = p
+  \end{equation}
+  $\therefore$ this function is onto
+  
+  \item
+  There does not exists any integer solution that satisfy $m^2 - n^2 = 2 \therefore$ this function is not onto
+  \item
+  
+\end{enumerate}
 \end{solution}
 
 \begin{problem} Section 2.3, Exercise 50, page 154. 
@@ -101,6 +182,12 @@ Spring 2017 -- Hyunyoung Lee\\}
 \begin{problem} Section 2.3, Exercise 58, page 154. \textsl{Explain.}
 \end{problem}
 \begin{solution}
+\begin{enumerate}[a)]
+  \item There are 8 bits in a byte. $\left \lceil \dfrac{4}{8} \right \rceil = 1$ To encode only 4 bits, only 1 byte is needed
+  $\left \lceil \dfrac{10}{8} \right \rceil = 2$ To encode a 10 bits of data, 2 bytes are needed
+  \item $\left \lceil \dfrac{500}{8} \right \rceil =  63$ bytes are needed to encode 500 bits
+  \item $\left \lceil \dfrac{3000}{8} \right \rceil = 375$ Exactly 375 bytes are needed to encode 3000 bits
+\end{enumerate}
 \end{solution}
 
 \begin{problem} (\textbf{Extra credit 10 points}) Prove that 
