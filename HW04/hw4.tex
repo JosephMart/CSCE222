@@ -1,6 +1,6 @@
 \documentclass{article}
 \usepackage{amsmath,amssymb,amsthm,latexsym,paralist}
-
+\usepackage{listings}
 \theoremstyle{definition}
 \newtheorem{problem}{Problem}
 \newtheorem*{solution}{Solution}
@@ -51,7 +51,14 @@ Spring 2017 -- Hyunyoung Lee\\}
 \duedate{Friday, 2/24/2017 before 11:00 a.m.}{Friday, 2/24/2017}
 \name{Joseph Martinsen}{503}
 \begin{resources} (All people, books, articles, web pages, etc.\ that
-  have been consulted when producing your answers to this homework.)
+  have been consulted when producing your answers to this homework.) \\
+  \begin{verbatim}
+  https://www.youtube.com/watch?v=P2qHss2-aSQ
+  https://www.youtube.com/watch?annotation_id=annotation_2862598731&feature=iv&
+    index=3&list=PLj68PAxAKGowkG1QYgun4DrByPwsyB04h&src_vid=P2qHss2-aSQ&v=DjfYhHSkWqo
+  https://www.youtube.com/watch?annotation_id=annotation_4083618415&feature=iv&src_vid=P2qHss2-aSQ&v=
+    Vzqaz4MDGvc
+    \end{verbatim}
 \end{resources}
 \honor
 
@@ -106,8 +113,27 @@ Determine whether each of the following statements is true or false.
 In each case, answer true or false, and justify your answer.
 \begin{enumerate}[a)]
 \item $3n^2-42 = O(n^2)$
+\begin{align*}
+  3n^2-42 &\le U n^{2} \\
+  &\le 3n^{2} + n^{2} \\
+  &\le 4 n^{2} &\text{for n $>$ 1}
+\end{align*}
+$\therefore 3n^2-42$ is $O(n^{2})$ with $U = 4$ and $n > 1$ as witnesses $\qed$
+
 \item $n^2 = O(n\log n)$
+\begin{align*}
+  \dfrac{n^2}{n\log n} = \dfrac{n}{\log n}
+\end{align*}
+As $n$ grows, this does not approach nor is there $C$ that satisfies this equation for all $n$
+$\therefore n^2$ is NOT $O(n\log n)$
+
 \item $1/n = O(1)$
+\begin{align*}
+  \dfrac{1}{n} &\le U 1 \\
+  \dfrac{1}{n} &\le 1 &\text{for n $>$ 1}
+\end{align*}
+$\therefore \dfrac{1}{n}$ is $O(1)$ with $U = 1$ and $n > 1$ as witnesses $\qed$
+
 \item $n^n = \Omega(2^n)$
 \end{enumerate}
 \end{problem}
