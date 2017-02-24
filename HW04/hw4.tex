@@ -146,6 +146,13 @@ Let $k$ be a fixed positive integer. Show that
 $$ 1^k+2^k+\cdots + n^k  = O(n^{k+1}) $$ holds.
 \end{problem}
 \begin{solution}
+\begin{align*}
+  1^k+2^k+\cdots + n^k  &\le U n^{k+1} \\
+  &\le n^{k} + n^{k} + \cdots  + n^{k} \\
+  &\le n \cdot n^{k} \\
+  &\le 1 \cdot n^{k+1} &\text{for n $>$ 1}
+\end{align*}
+$\therefore 1^k+2^k+\cdots + n^k$ is $O(n^{k+1})$ with $U = 1$ and $n > 1$ as witnesses $\qed$
 \end{solution}
 
 \begin{problem} (15 points)
