@@ -72,8 +72,8 @@ $$f_1(n) + f_3(n) = O(\max(|f_2(n)|,  |f_4(n)| ) ).$$
 \end{problem}
 \begin{solution}
 By definition of Big Oh, \\
-If $f_1 \in O(f_2)$, then there exist a $k_1 \in \mathbb{R}$ and $n_1 \in \mathbb{N}$ such that $f_1(n) \le Af_2(n)$ for all $n>n_1$\\
-In the same manner, if $f_3 \in O(f_4)$, then there exist a $k_2 \in \mathbb{R}$ and $n_2 \in \mathbb{N}$ such that $f_1(n) \le Af_2(n)$ for all $n>n_2$ \\
+If $f_1 \in O(f_2)$, then there exist a $k_1 \in \mathbb{R}$ and $n_1 \in \mathbb{N}$ such that $f_1(n) \le k_1 f_2(n)$ for all $n>n_1$\\
+In the same manner, if $f_3 \in O(f_4)$, then there exist a $k_2 \in \mathbb{R}$ and $n_2 \in \mathbb{N}$ such that $f_1(n) \le k_2 f_2(n)$ for all $n>n_2$ \\
 Let $N = \text{max}(n_1,n_2)$. For all $n > N$ it is true that
 \begin{align*}
   f_1(n) + f_3(n) &\le k_1 f_2(n) + k_2 f_4(n)
@@ -130,11 +130,22 @@ $\therefore n^2$ is NOT $O(n\log n)$
 \item $1/n = O(1)$
 \begin{align*}
   \dfrac{1}{n} &\le U 1 \\
-  \dfrac{1}{n} &\le 1 &\text{for n $>$ 1}
+  \dfrac{1}{n} &\le 1 &\text{for n $>$ 1} \\
+  1 &\le n &\text{which is True}
 \end{align*}
 $\therefore \dfrac{1}{n}$ is $O(1)$ with $U = 1$ and $n > 1$ as witnesses $\qed$
 
 \item $n^n = \Omega(2^n)$
+\begin{align*}
+	n^n &\ge L\; 2^n \\
+    n^n &\ge 2^n	&\text{Assume $U=1$} \\
+    \log_2{n^n} &\ge n \\
+    n\log_2{n} &\ge n \\
+    \log_2{n} &\ge 1 \\
+    2^{\log_2{n}} &\ge 2^1 \\
+    n &\ge 2
+\end{align*}
+$\therefore\; n^n = \Omega(2^n) $ is true with $L=1$ and $n >2$ as witnesses 
 \end{enumerate}
 \end{problem}
 \begin{solution}
