@@ -117,7 +117,28 @@ In each case, answer true or false, and justify your answer.
 \begin{problem} (15 points) 
 Does $\Theta(n^3+2n+1) = \Theta(n^3)$ hold?  Justify your answer.
 \end{problem}
-\begin{solution}
+\begin{solution}\ \\
+A function $f(n)$ is $\Theta(g(n))$ iff \\ 
+\hspace{10pt} $f(n) \le U g(n)$ for all $n>n_0$ \textit{$O$ definition} \\
+and\\
+\hspace{10pt} $f(n) \ge L g(n)$ for all $n>n_0$ \textit{$\Omega$ definition} \\
+First, check if $O(n^3+2n+1) = O(n^3)$ holds
+\begin{align*}
+    n^3+2n+1 &\le U n^3 \\
+    &\le n^3 + 2 n^3 + n^3\\
+    &\le 4n^3
+\end{align*}
+$\therefore O(n^3+2n+1) = O(n^3)$ with $U=4$ and $n \ge 1$ as witnesses \\
+Next, check $\Omega(n^3+2n+1) = \Omega(n^3)$
+\begin{align*}
+    n^3+2n+1 &\ge L n^3 \\
+    n^3+2n+1 &\ge n^3 &\text{for $n \ge 1$}\\
+    1 + \dfrac{2}{n^2} + \dfrac{1}{n^3} &\ge 1\\
+    1 + \dfrac{2}{1} + \dfrac{1}{1} &\ge 1&\text{for $n \ge 1$}
+\end{align*}
+$\therefore O(n^3+2n+1) = O(n^3)$ \\
+$\therefore \Omega(n^3+2n+1) = \Omega(n^3)$\\
+$\therefore \Theta(n^3+2n+1) = \Theta(n^3) \qed$
 \end{solution}
 
 \begin{problem} (10 points)
