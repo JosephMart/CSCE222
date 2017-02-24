@@ -1,0 +1,155 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm,latexsym,paralist}
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+\newtheorem*{solution}{Solution}
+\newtheorem*{resources}{Resources}
+
+\newcommand{\name}[2]{\noindent\textbf{Name: #1}\hfill \textbf{Section: #2}}
+\newcommand{\honor}{\noindent On my honor, as an Aggie, I have neither
+  given nor received any unauthorized aid on any portion of the
+  academic work included in this assignment. Furthermore, I have
+  disclosed all resources (people, books, web sites, etc.) that have
+  been used to prepare this homework. \\[2ex]
+ \textbf{Signature:} \underline{\hspace*{10cm}} }
+ 
+\newcommand{\checklist}{\noindent\textbf{Checklist:}
+\begin{compactitem}[$\Box$] 
+\item Did you type in your name and section? 
+\item Did you disclose all resources that you have used? \\
+(This includes all people, books, websites, etc.\ that you have consulted.)
+\item Did you sign that you followed the Aggie Honor Code? 
+\item Did you solve all problems? 
+\item Did you submit the .tex and .pdf files of your homework to the correct link on eCampus?
+\item Did you submit a signed hardcopy of the pdf file in class? 
+\end{compactitem}
+}
+
+\newcommand{\problemset}[1]{\begin{center}\textbf{Problem Set #1}\end{center}}
+\newcommand{\duedate}[2]{\begin{quote}\textbf{Due dates:} Electronic
+    submission of \textsl{yourLastName-yourFirstName-hw4.tex} and 
+    \textsl{yourLastName-yourFirstName-hw4.pdf} files of this homework is due on
+    \textbf{#1} on \texttt{http://ecampus.tamu.edu}. You will see two separate links
+    to turn in the .tex file and the .pdf file separately. Please do not archive or compress the files.  
+    A signed paper copy of the pdf file is due on \textbf{#2} \textsl{at the beginning of class}.
+    \textbf{If any of the three submissions are missing, your work will not be graded.}\end{quote} }
+
+\newcommand{\N}{\mathbf{N}}
+\newcommand{\R}{\mathbf{R}}
+\newcommand{\Z}{\mathbf{Z}}
+
+
+\begin{document}
+\vspace*{-15mm}
+\begin{center}
+{\large
+CSCE 222 [Sections 502, 503] Discrete Structures for Computing\\[.5ex]
+Spring 2017 -- Hyunyoung Lee\\}
+\end{center}
+\problemset{4}
+\duedate{Friday, 2/24/2017 before 11:00 a.m.}{Friday, 2/24/2017}
+\name{Joseph Martinsen}{503}
+\begin{resources} (All people, books, articles, web pages, etc.\ that
+  have been consulted when producing your answers to this homework.)
+\end{resources}
+\honor
+
+\smallskip
+
+\begin{problem} (10 points)
+Let $f_1, f_2, f_3, f_4$ be functions from the set $\N$ of natural numbers
+to the set $\R$ of real numbers. Suppose that $f_1= O(f_2)$ and
+$f_3=O(f_4)$. Use the \textit{definition} of Big Oh \textit{given in class} to prove that 
+$$f_1(n) + f_3(n) = O(\max(|f_2(n)|,  |f_4(n)| ) ).$$
+\end{problem}
+\begin{solution}
+By definition of Big Oh, \\
+If $f_1 \in O(f_2)$, then there exist a $k_1 \in \mathbb{R}$ and $n_1 \in \mathbb{N}$ such that $f_1(n) \le Af_2(n)$ for all $n>n_1$\\
+In the same manner, if $f_3 \in O(f_4)$, then there exist a $k_2 \in \mathbb{R}$ and $n_2 \in \mathbb{N}$ such that $f_1(n) \le Af_2(n)$ for all $n>n_2$ \\
+Let $N = \text{max}(n_1,n_2)$. For all $n > N$ it is true that
+\begin{align*}
+  f_1(n) + f_3(n) &\le k_1 f_2(n) + k_2 f_4(n)
+\end{align*}
+Let $K = \text{max}(k_1,k_2)$ and $f_5(n) = \text{max}(f_2(n),f_4(n))$
+\begin{align*}
+  f_1(n) + f_3(n) &\le K[f_2(n) + f_4(n)] \\
+  &\le K f_5(n) = K \;\text{max}(f_2(n),f_4(n)) \\
+    f_1(n) + f_3(n) &\le K \;\text{max}(f_2(n),f_4(n))
+\end{align*}
+By definition of Big Oh, for $n > N$
+\begin{align*}
+  f_1(n) + f_3(n) &\in O( \;\text{max}(f_2(n),f_4(n))) \qed
+\end{align*}
+\end{solution}
+
+\begin{problem} (10 points) 
+Let $f_1, f_2, f_3$ be functions from the set $\N$ of natural numbers
+to the set $\R$ of real numbers. Suppose that $f_1= O(f_2)$ and
+$f_2=O(f_3)$. Is it possible that 
+$$ f_1(n) > f_3(n)$$ 
+holds for all natural numbers $n$? Give an example or given an argument that this
+is impossible. 
+\end{problem}
+\begin{solution}
+Allow $f_3 = f_2 +1$ and $f_2 = f_1 +1$, where $f_1 = O(f_2)$ and $f_2 = O(f_3)$ is still true.
+\begin{align*}
+  f_3 &= f_2 +1 \\
+  f_3 &= f_1 + 1 + 1 \\
+  f_3 &= f_1 +2
+\end{align*}
+For all $n$, $f_3$ is 2 bigger than $f_1$. It then follows that $f_1 < f_3 \forall n \qed$
+\end{solution}
+
+\begin{problem} (5 pts $\times$ 4 = 20 points) 
+Determine whether each of the following statements is true or false.
+In each case, answer true or false, and justify your answer.
+\begin{enumerate}[a)]
+\item $3n^2-42 = O(n^2)$
+\item $n^2 = O(n\log n)$
+\item $1/n = O(1)$
+\item $n^n = \Omega(2^n)$
+\end{enumerate}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+\begin{problem} (15 points) 
+Does $\Theta(n^3+2n+1) = \Theta(n^3)$ hold?  Justify your answer.
+\end{problem}
+\begin{solution}
+\end{solution}
+
+\begin{problem} (10 points)
+Let $k$ be a fixed positive integer. Show that 
+$$ 1^k+2^k+\cdots + n^k  = O(n^{k+1}) $$ holds.
+\end{problem}
+\begin{solution}
+\end{solution}
+
+\begin{problem} (15 points)
+Suppose that you have two algorithms $A$ and $B$ that solve the same
+problem. Algorithm $A$ has worst case running time $T_A(n) = 2n^2-2n+1$ 
+and Algorithm $B$ has worst case running time $T_B(n) = n^2+n-1$. 
+\begin{enumerate}[a)]
+\item Show that both $T_A(n)$ and $T_B(n)$ are in $O(n^2)$. 
+\item Show that $T_A(n) = 2n^2 + O(n)$ and $T_B(n) = n^2 +O(n)$. 
+\item Explain which algorithm is preferable. 
+\end{enumerate}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+\begin{problem} (10 points) Section 3.3, Exercise 14 on page 230.
+\end{problem}
+\begin{solution}
+\end{solution}
+
+\begin{problem} (10 points) Section 3.3, Exercise 16 a), d), g) and h) on page 230.
+\end{problem}
+\begin{solution}
+\end{solution}
+
+\goodbreak
+\checklist
+\end{document}
