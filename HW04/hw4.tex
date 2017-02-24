@@ -151,24 +151,99 @@ $$ 1^k+2^k+\cdots + n^k  = O(n^{k+1}) $$ holds.
 \begin{problem} (15 points)
 Suppose that you have two algorithms $A$ and $B$ that solve the same
 problem. Algorithm $A$ has worst case running time $T_A(n) = 2n^2-2n+1$ 
-and Algorithm $B$ has worst case running time $T_B(n) = n^2+n-1$. 
-\begin{enumerate}[a)]
-\item Show that both $T_A(n)$ and $T_B(n)$ are in $O(n^2)$. 
-\item Show that $T_A(n) = 2n^2 + O(n)$ and $T_B(n) = n^2 +O(n)$. 
-\item Explain which algorithm is preferable. 
-\end{enumerate}
+and Algorithm $B$ has worst case running time $T_B(n) = n^2+n-1$.
 \end{problem}
-\begin{solution}
+\begin{solution}\ \\
+\begin{enumerate}[a)]
+\item Show that both $T_A(n)$ and $T_B(n)$ are in $O(n^2)$.
+\begin{align*}
+  T_A(n) = 2n^2 - 2n + 1 &\le U n^2 \\
+  &\le 2n^2 + n^2 + n^2 \\
+  &\le 4 n^2 &\text{for $n > 1$}
+\end{align*}
+$\therefore T_A(n)$ is $O(n^2)$ with $U = 4$ and $n>1$ as witnesses \\
+
+\begin{align*}
+  T_B(n) = n^2+n-1 &\le U n^2 \\
+  &\le 2n^2 + n^2 + n^2 \\
+  &\le 4 n^2 &\text{for $n > 1$}
+\end{align*}
+$\therefore T_B(n)$ is $O(n^2)$ with $U = 4$ and $n>1$ as witnesses
+
+\item Show that $T_A(n) = 2n^2 + O(n)$ and $T_B(n) = n^2 +O(n)$.
+\begin{align*}
+  -2n+1 &\le Un \\
+  &\le n + n \\
+  &\le 2n \\
+  -2n+1 &\in O(n)
+\end{align*}
+$\therefore T_A(n) = 2n^2-2n+1=2n^2 + O(n)$
+\begin{align*}
+  n-1 &\le Un \\
+  &\le n + n \\
+  &\le 2n \\
+  n-1 &\in O(n)
+\end{align*}
+$\therefore T_A(n) = n^2+n-1=n^2 + O(n)$
+
+\item Explain which algorithm is preferable. \\
+For large $n \; T_B(n)$ is preferable because due to the fact that the coefficient of $n^2$ is 1 instead of 2, like in $T_A(n)$
+\end{enumerate}
 \end{solution}
 
 \begin{problem} (10 points) Section 3.3, Exercise 14 on page 230.
 \end{problem}
-\begin{solution}
+\begin{solution}\ \\
+\begin{enumerate}[a)]
+  \item \ \\
+    $n=2\; a_2=3 \; a_1=1 \; a_0=1$ \\
+    Line 1: $y:= 3$ \\
+    For Loop: \\
+    $i:=1 \quad y:= 3*2 + 1 => 7$ \\
+    $i:=2 \quad y:= 7*2 + 1 => 15 $ \\
+    return 15
+  \item \ \\
+  There is one multiplication and one addition within the for loop. The loop executes $n$ times for $x=n$. \\
+  $\therefore$ there are $n$ additions and $n$ multiplications 
+\end{enumerate}
 \end{solution}
 
 \begin{problem} (10 points) Section 3.3, Exercise 16 a), d), g) and h) on page 230.
 \end{problem}
-\begin{solution}
+\begin{solution}\ \\
+Seconds in a day $= 10^5 sec$ \\
+\# of Operations $= 10^{16}$ \\
+a) \\
+  \begin{align*}
+    f(n) &\le 10^{16} \\
+    \log n &\le 10^{16} \\
+    n &\le 2^{10^{16}}
+  \end{align*}
+  Largest value of $n$ is $2^{10^{16}}$ \\
+d) \\
+  \begin{align*}
+    f(n) &\le 10^{16} \\
+    1000 n^2 n &\le 10^{16} \\
+    n^2 &\le 10^{13} \\
+    n &\le 10^{13/2}
+  \end{align*}
+  Largest value of $n$ is $10^{13/2}$ \\
+g) \\
+  \begin{align*}
+    f(n) &\le 10^{16} \\
+    2^{2n} &\le 10^{16} \\
+    2n &\le \log_2 {10^{16}} \\
+    n &\le \dfrac{1}{2}  \log_2 {10^{16}}
+  \end{align*}
+  Largest value of $n$ is $\dfrac{1}{2}  \log_2 {10^{16}}$ \\
+h) \\
+  \begin{align*}
+    f(n) &\le 10^{16} \\
+    2^{2^2n} &\le 10^{16} \\
+    2^n &\le \log_2 {10^{16}} \\
+    n &\le \log_2(\log_2 {10^{16}})
+  \end{align*}
+  Largest value of $n$ is $\log_2(\log_2 {10^{16}})$ \\
 \end{solution}
 
 \goodbreak
