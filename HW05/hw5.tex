@@ -314,7 +314,27 @@ $\therefore$ \textbf{the statement holds for all $n \ge 0 $ by mathematical indu
 \begin{problem} (15 points)
 Section 5.1, Exercise 24, page 330 (use mathematical induction)
 \end{problem}
-\begin{solution} 
+\begin{solution} \ \\
+\textbf{Assume} $\dfrac{1}{2n} \le \dfrac{[1 \cdot 3 \cdot 5 \dots (2n-1) ]}{2\cdot4\dots2n}$ \textbf{is true for all} $n \ge 1 $ \\
+\textbf{\underline{Basis Step}: Show } $P(1)$ \\
+\begin{align*}
+  \dfrac{1}{2(1)} = \dfrac{1}{2}\\
+  \dfrac{2(1) - 1}{2(1)} = \dfrac{[1]}{2}
+\end{align*}
+$\therefore P(1)$ holds \\
+\textbf{\underline{Inductive Step}: Show } $P(k) \rightarrow P(k+1)$ \\
+\textbf{Assume} $P(k)$ \textbf{for arbitrary $k \ge  1$} \\
+\textbf{Show P(k+1):} \\
+\begin{align*}
+  \dfrac{[1 \cdot 3 \cdot 5 \dots (2k-1) ]}{2\cdot4\dots2k}\cdot \dfrac{2(k+1 )- 1}{2(k+1)} \\
+  \dfrac{1}{2k}\dfrac{2(k+1 )- 1}{2(k+1)} &\textbf{by Inductive Hypothesis} \\
+  \dfrac{2k+1}{4k(k+1)} \\
+  \dfrac{2k}{4k(k+1)} + \dfrac{1}{4k(k+1)} \\
+  \dfrac{1}{2(k+1)} + \dfrac{1}{4k(k+1)} \\
+  \dfrac{1}{2(k+1)} \le \dfrac{1}{2(k+1)} + \dfrac{1}{4k(k+1)}
+\end{align*}
+$\therefore P(k) \rightarrow P(k+1)$ \textbf{holds}\\
+$\therefore$ \textbf{the statement holds for all $n \ge 1 $ by mathematical induction}
 \end{solution}
 
 \begin{problem} (10 points)
