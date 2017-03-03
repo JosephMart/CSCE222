@@ -249,7 +249,37 @@ you have carefully read Section 5.1.}
 $$\sum_{i=0}^n 3^i = \frac{3^{n+1}-1}{2}$$
 holds for every non-negative integer $n$.
 \end{problem}
-\begin{solution}
+\begin{solution} \ \\
+% ~~~~ \textbf{is true for all} $n \ge  $ \\
+% \textbf{\underline{Basis Step}: Show } $P()$ \\
+% $123$ \\
+% $\therefore P()$ holds \\
+% \textbf{\underline{Inductive Step}: Show } $P(k) \rightarrow P(k+1)$ \\
+% \textbf{Assume} $P(k)$ \textbf{for arbitrary $k \ge  $} \\
+% \textbf{Show P(k):} \\
+% $123$ \\
+% $\therefore P(k) \rightarrow P(k+1)$ \textbf{holds}\\
+% $\therefore$ ~~ \textbf{holds for all $n \ge  $ by mathematical induction}
+\textbf{Assume} $\displaystyle \sum_{i=0}^n 3^i = \frac{3^{n+1}-1}{2}$ \textbf{is true for all} $n \ge 0 $ \\
+\textbf{\underline{Basis Step}: Show} $P(0)$ \\
+\begin{align*}
+3^0 = 1 \\
+\dfrac{3^1 - 1}{2} = 1
+\end{align*}
+$\therefore P(0)$ holds \\  
+\textbf{\underline{Inductive Step}: Show } $P(k) \rightarrow P(k+1)$ \\
+\textbf{Assume} $P(k)$ \textbf{for arbitrary $k \ge 0 $:} $\displaystyle \sum_{i=0}^k 3^i$ \\
+\textbf{Show P(k+1):} $\displaystyle \sum_{i=0}^{k+1} 3^i$ \\
+\begin{align*}
+\displaystyle \sum_{i=0}^{k+1} 3^i &= 3^{k+1} + \displaystyle \sum_{i=0}^k 3^i \\
+&= 3^{k+1} + \frac{3^{k+1}-1}{2} &\textbf{by Inductive Hypothesis}\\
+&= \frac{2\cdot 3^{k+1} + 3^{k+1}-1}{2} \\
+&= \frac{3^{k+1}(2+1)-1}{2} \\
+&= \frac{3^{k+1}(3)-1}{2} \\
+&= \frac{3^{k+2}-1}{2}
+\end{align*}
+$\therefore P(k) \rightarrow P(k+1)$ \textbf{holds}\\  
+$\therefore$ \textbf{the statement holds for all $n \ge 0 $ by mathematical induction}
 \end{solution}
 
 \begin{problem} (15 points)
