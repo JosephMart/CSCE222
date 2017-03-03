@@ -252,14 +252,18 @@ holds for every non-negative integer $n$.
 \begin{solution} \ \\
 % ~~~~ \textbf{is true for all} $n \ge  $ \\
 % \textbf{\underline{Basis Step}: Show } $P()$ \\
-% $123$ \\
+% \begin{align*}
+%   
+% \end{align*}
 % $\therefore P()$ holds \\
 % \textbf{\underline{Inductive Step}: Show } $P(k) \rightarrow P(k+1)$ \\
 % \textbf{Assume} $P(k)$ \textbf{for arbitrary $k \ge  $} \\
 % \textbf{Show P(k):} \\
-% $123$ \\
+% \begin{align*}
+%   &\textbf{by Inductive Hypothesis}
+% \end{align*}
 % $\therefore P(k) \rightarrow P(k+1)$ \textbf{holds}\\
-% $\therefore$ ~~ \textbf{holds for all $n \ge  $ by mathematical induction}
+% $\therefore$ \textbf{the statement holds for all $n \ge  $ by mathematical induction}
 \textbf{Assume} $\displaystyle \sum_{i=0}^n 3^i = \frac{3^{n+1}-1}{2}$ \textbf{is true for all} $n \ge 0 $ \\
 \textbf{\underline{Basis Step}: Show} $P(0)$ \\
 \begin{align*}
@@ -285,7 +289,26 @@ $\therefore$ \textbf{the statement holds for all $n \ge 0 $ by mathematical indu
 \begin{problem} (15 points)
 Section 5.1, Exercise 8, page 329 (use mathematical induction)
 \end{problem}
-\begin{solution} 
+\begin{solution} \ \\
+\textbf{Assume} $2-2\cdot 7+2\cdot 7^2 -\dots +2(-7)^n = \dfrac{(1-(-7)^{n+1})}{4}$ \textbf{is true for all} $n \ge 1 $ \\
+\textbf{\underline{Basis Step}: Show } $P(0)$
+\begin{align*}
+  \dfrac{(1-(-7)^{0+1})}{4} = 2 \\
+  2(-7)^0 = 2
+\end{align*}
+$\therefore P(0)$ holds \\
+\textbf{\underline{Inductive Step}: Show } $P(k) \rightarrow P(k+1)$ \\
+\textbf{Assume} $P(k)$ \textbf{for arbitrary $k \ge 0 $} \\
+\textbf{Show P(k+1):} \\
+\begin{align*}
+  2-2\cdot 7+2\cdot 7^2 -\dots +2(-7)^k +2(-7)^{k+1} \\
+  \dfrac{(1-(-7)^{k+1})}{4} + 2(-7)^{k+1}  &\textbf { by Inductive Hypothesis} \\
+  \dfrac{1-(-7)^{k+1}+ 8(-7)^{k+1}}{4} \\
+  \dfrac{1 - (8-1)(-7)^{k+1}}{4} \\
+  \dfrac{1 - (-7)^{k+2}}{4}
+\end{align*}
+$\therefore P(k) \rightarrow P(k+1)$ \textbf{holds}\\
+$\therefore$ \textbf{the statement holds for all $n \ge 0 $ by mathematical induction}
 \end{solution}
 
 \begin{problem} (15 points)
