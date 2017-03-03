@@ -365,7 +365,27 @@ $\therefore$ \textbf{the statement holds for all $n \ge 1 $ by mathematical indu
 \begin{problem} (\textbf{Extra credit 10 points})
 Section 5.1, Exercise 14, page 330 (use mathematical induction)
 \end{problem}
-\begin{solution} 
+\begin{solution} \ \\
+$\displaystyle\sum_{k=1}^{n}k 2^k = (n-1)2^{n+1}+2$ \textbf{is true for all} $n \ge 1 $ \\
+\textbf{\underline{Basis Step}: Show } $P(1)$ \\
+\begin{align*}
+  \displaystyle\sum_{k=1}^{1}k 2^k  = 1\cdot 2^1 = 2\\
+  (1-1)2^{1+1}+2 = 0 + 2 = 2
+\end{align*}
+$\therefore P(1)$ holds \\
+\textbf{\underline{Inductive Step}: Show } $P(k) \rightarrow P(k+1)$ \\
+\textbf{Assume} $P(k)$ \textbf{for arbitrary $k \ge 1 $} \\
+\textbf{Show P(k+1):} \\
+\begin{align*}
+  \displaystyle\sum_{i=1}^{k+1}i 2^i \\
+  \displaystyle\sum_{i=1}^{k}i 2^i + (k+1)2^{k+1}\\
+  (k-1)2^{k+1} + 2 + (k+1)2^{k+1} &\textbf{by Inductive Hypothesis} \\
+  (k-1 + k + 1)2^{k+1} + 2 \\
+  (2k)2^{k+1} + 2 \\
+  k2^{k+2} + 2
+\end{align*}
+$\therefore P(k) \rightarrow P(k+1)$ \textbf{holds}\\
+$\therefore$ \textbf{the statement holds for all $n \ge 1 $ by mathematical induction}
 \end{solution}
 
 \goodbreak
