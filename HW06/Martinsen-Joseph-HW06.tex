@@ -1,5 +1,5 @@
 \documentclass{article}
-\usepackage{amsmath,amssymb,amsthm,latexsym,paralist}
+\usepackage{amsmath,amssymb,amsthm,latexsym,paralist,wasysym}
 
 \theoremstyle{definition}
 \newtheorem{problem}{Problem}
@@ -60,25 +60,47 @@ Spring 2017 -- Hyunyoung Lee\\}
 \begin{problem} (5 points) 
 Section 5.1, Exercise 50, page 331
 \end{problem}
-\begin{solution} 
+\begin{solution} \ \\
+In the basis step of this proof, there is an error. $$\displaystyle \dfrac{(1 + \frac{1}{2})^2}{2} = \left(\dfrac{3}{2} \right)^2 \dfrac{1}{2} = \dfrac{9}{8}$$ and $$\displaystyle \sum_{i=1}^1 i = 1$$ are not true or equal as stated.
 \end{solution}
 
 \begin{problem} (15 points) 
 Section 5.2, Exercise 4, pages 341--342
 \end{problem}
-\begin{solution} 
+\begin{solution}\ \\
+\begin{enumerate}[a)]
+  \item \ \\
+  \underline{\textbf{Basis Step}} \\
+  $P(18):  1 \cdot 4$ cent stamps and $2 \cdot 7$ cent stamps \\
+  $P(19):  3 \cdot 4$ cent stamps and $1 \cdot 7$ cent stamps \\
+  $P(20):  5 \cdot 4$ cent stamps and $0 \cdot 7$ cent stamps \\
+  $P(21):  0 \cdot 4$ cent stamps and $3 \cdot 7$ cent stamps
+  
+  \item
+  The inductive hypothesis of this proof is as follows. Any $j \cent $ postage stamp can be made from a combination of $4\cent$ and $7\cent$ stamps for all $j$ stamps with $ 18 \leq k$. where $k \ge 21$.
+  
+  \item
+  In order to prove the inductive step, show that $k+1 \cent$ stamps can be made from $4\cent$ and $7 \cent$ stamps.
+  
+  \item
+  With $k \ge 21$, $P(k-3)$ has been shown to be true by the inductive hypothesis. Adding another $4 \cent$ stamp, it must follow that $P(k+1)$ is also true. 
+  
+  \item
+  With the basis step and the inductive step shown to be valid, $P$ has been proved to hold for $n \ge 21$ by strong induction.
+\end{enumerate}
 \end{solution}
 
 \begin{problem} (10 points)
 Section 5.2, Exercise 12, page 342
 \end{problem}
-\begin{solution} 
+\begin{solution}
 \end{solution}
 
 \begin{problem} (10 points)
 Section 5.2, Exercise 30, page 344
 \end{problem}
-\begin{solution} 
+\begin{solution}\ \\
+The basis step shows that $a^0 = 1$. The correct induction hypothesis would be $a^0 = 1$ not $a^j = 1$. The incorrect inductive hypothesis is used in this proof.
 \end{solution}
 
 \begin{problem} (30 points)
@@ -86,13 +108,37 @@ Section 5.3, Exercise 6, page 357.
 To prove that your formula is valid, use mathematical induction.
 For the invalid recursive definitions, explain why they are invalid.
 \end{problem}
-\begin{solution} 
+\begin{solution} \ \\
+\begin{enumerate}[a)]
+  \item 
+\end{enumerate}
 \end{solution}
 
 \begin{problem} (15 points)
 Section 5.3, Exercise 16, page 358 (use mathematical induction)
 \end{problem}
-\begin{solution} 
+\begin{solution}  \ \\
+$f_n$ is the $n^{th}$ Fibonacci number. \\
+\textbf{Assume} $f_0 - f_1 + f_2 - \dots - f_{2n-1} + f_{2n} = f_{2n-1} - 1 $ for $n\ge 1$ \\
+\textbf{\underline{Basis Step}: Show }$P(1)$ \\
+\begin{align*}
+P(1) &= f_0 - f_1 + f_2 = 0 - 1 + 1 = 0 \\
+P(1) &= f_{2(1) - 1} - 1 = f_1 - 1 = 1 - 1 = 0
+\end{align*}
+$\therefore P(1)$ holds \\
+\textbf{\underline{Inductive Step}: Show } $P(k) \rightarrow P(k+1)$ \\
+\textbf{Assume} $P(k)$ \textbf{for arbitrary $k \ge  1$} \\
+\textbf{Show P(k+1):} \\
+\begin{align*}
+  f_0 - f_1 + f_2 - \dots - f_{2(k+1)-1} + f_{2(k+1)} &= f_0 - f_1 + f_2 - \\
+  & \dots - f_{2k-1} + f_{2k} - f_{2k+1} + f_{2k+2} \\
+  &= f_{2k-1} - 1 - f_{2k+1} + f_{2k+2} &\textbf{By Inductive Hypothesis}\\
+  &= f_{2k-1} - 1 + f_{2k} \\
+  &= f_{2k+1} - 1 &\textbf{By Fib.}\\
+  &= f_{2(k+1) - 1} - 1
+\end{align*}
+$\therefore P(k) \rightarrow P(k+1)$ \textbf{holds}\\
+$\therefore$ \textbf{the statement holds for all $n \ge 1 $ by mathematical induction}
 \end{solution}
 
 \begin{problem} (15 points)
