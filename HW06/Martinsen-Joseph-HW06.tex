@@ -254,7 +254,20 @@ $\therefore$ the statment has been proven by structural induction.
 \begin{problem} (\textbf{Extra credit 10 points})
 Section 5.3, Exercise 36, page 359
 \end{problem}
-\begin{solution} 
+\begin{solution} \ \\
+Let $w_1 =$ abc and $w_2 =$ def. \\
+\textbf{\underline{Basis Step}} \\
+\begin{align}
+  w_1 &= cba \\
+  w_2 &= fed \\
+  w_1 w_2 &= abc def \\
+  (w_1 w_2)^r &= fedcba
+\end{align}
+\textbf{\underline{Recursive Step}} \\
+\begin{align*}
+  (w_2)^r (w_1)^r &= (fed) (cba) &\textbf{by (3)} \\
+  &= (w_1w_2)^r &\textbf{by (6)} \\
+\end{align*}
 \end{solution}
 
 \goodbreak
