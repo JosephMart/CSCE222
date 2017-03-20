@@ -93,7 +93,31 @@ Section 5.2, Exercise 4, pages 341--342
 \begin{problem} (10 points)
 Section 5.2, Exercise 12, page 342
 \end{problem}
-\begin{solution}
+\begin{solution} \ \\
+% \textbf{Assume} $f_0 - f_1 + f_2 - \dots - f_{2n-1} + f_{2n} = f_{2n-1} - 1 $ for $n\ge 1$ \\
+\textbf{\underline{Basis Step}: Show }$P(0), P(1), P(2), P(3)$ \\
+\begin{align*}
+2^0 = 1 \\
+2^1 = 2 \\
+2^2 = 4 \\
+2^3 = 8
+\end{align*}
+$\therefore P(0), P(1), P(2), P(3)$ holds \\
+\textbf{\underline{Inductive Step}} Let $k \ge 1$, assume the claim holds for all $n$ where $1 \le n \le k$ \\ \ \\
+\textbf{Case 1:} Assume $k+1$ is even. Then $\dfrac{k+1}{2}$ is an integer between 1 and $k$. The claim holds for $\dfrac{k+1}{2}$ by the strong induction hypothesis.
+\begin{align*}
+\dfrac{k+1}{2} &= 2m_1 + 2m_2 + \dots + 2 m_{\mathbb{L}} &\textbf{By Strong I.H.} \\
+\dfrac{k+1}{2} &= 2(m_1 + 1) + 2(m_2+1) + \dots + 2 (m_{\mathbb{L}} + 1)
+\end{align*}
+$\therefore$ \textbf{the statement holds for when $k+1$ is even} \\ \ \\
+\textbf{Case 2:} Assume $k+1$ is odd. By Strong Induction Hypothesis, the claim holds for $k$.
+\begin{align*}
+  k  &= 2m_1 + 2m_2 + \dots + 2 m_{\mathbb{L}} &\textbf{By Strong I.H.} \\
+  k + 1 &= 1 + 2m_1 + 2m_2 + \dots + 2 m_{\mathbb{L}} \\
+  k + 1 &= 2^0 + 2m_1 + 2m_2 + \dots + 2 m_{\mathbb{L}}
+\end{align*}
+$\therefore$ \textbf{the statement holds for when $k+1$ is odd} \\ \ \\
+$\therefore$ \textbf{the statement holds by proof by Strong Induction}
 \end{solution}
 
 \begin{problem} (10 points)
@@ -110,7 +134,58 @@ For the invalid recursive definitions, explain why they are invalid.
 \end{problem}
 \begin{solution} \ \\
 \begin{enumerate}[a)]
-  \item 
+  \item $f(0) = 1 \quad f(1) = -1 \quad f(2) = 1$. It is apparent that the closed form solution is $f(n) = (-1)^n$ \\
+  \textbf{\underline{Basis Step}: Show }$P(1)$ \\
+  \begin{align*}
+  P(1) &= f(1) = -f(0) = -1 \\
+  P(1) &= f(1) = (-1)^1 = -1
+  \end{align*}
+  $\therefore P(2)$ holds \\
+  \textbf{\underline{Inductive Step}: Show } $P(k) \rightarrow P(k+1)$ \\
+  \textbf{Assume} $P(k)$ \textbf{for arbitrary $k \ge  1$}: $f(k) = (-1)^k$ \\
+  \textbf{Show P(k+1):}
+  \begin{align*}
+    P(k+1) &= -f(k+1-1) \\
+    &= (-1) f(k) \\
+    &= (-1)^1 (-1)^k &\textbf{By Inductive Hypothesis}\\
+    &= (-1)^{k+1}
+  \end{align*}
+  $\therefore P(k) \rightarrow P(k+1)$ \textbf{holds}\\
+  $\therefore$ \textbf{the statement holds for all $n \ge 1 $ by mathematical induction}
+  
+  \item $f(0) = 1 \quad f(1) = 0 \quad f(2) = 2 \quad f(3) = 2 \quad f(4) = 0 \quad f(5) = 4$ \\
+  $2^n $
+  
+  \item It is not well defined because each $n \ge 2$ is dependent on the the value of $f(n+1)$ which is unknown.
+  
+  \item It is not well defined because the base case $f(1)$ is given as $f(1) = 1$ but also for $n \ge 1$ it is also given that $f(1) = 2f(1-1) = 2f(0) = 0$. Because of 2 different definitions for the same value, this is not well defined.
+  
+  \item $ f(0) = 2 \quad f(1) = f(0) = 2 \quad f(2) = 2f(0) = 4 \quad f(3) = f(2) = 4 \quad f(4) = 2f(3) = 8 \quad f(5) = 8 \quad f(6) = 16 \quad f(7) = 16$. A closed form solution is given by $f(n) = 2^{\lfloor (n+1)/2 \rfloor}$
+  \textbf{\underline{Basis Step}: Show }$P(1)$ \\
+  \begin{align*}
+  P(1) &= f(1) = f(0) = 2 \\
+  P(1) &= f(1) = 2^{\lfloor (1+1)/2 \rfloor} = 2^1 = 2
+  \end{align*}
+  $\therefore P(1)$ holds \\
+  \textbf{\underline{Inductive Step}: Show } $P(k) \rightarrow P(k+1)$ \\
+  \textbf{Assume} $P(k)$ \textbf{for arbitrary $k \ge  1$}: $f(k) = 2^{\lfloor (k+1)/2 \rfloor}$ \\
+  \textbf{Show P(k+1):} \\
+  \textbf{Case 1:} assume k+1 is even
+  \begin{align*}
+    P(k+1) &= 2f(k+1 - 2) \\
+    &= 2f(k - 1) \\
+    &= 2 \cdot 2^{\lfloor (k - 1 +1)/2 \rfloor} &\textbf{By Inductive Hypothesis}\\
+    &= 2^{\lfloor 1 + k/2 \rfloor} \\
+    &= 2^{\lfloor (k+2)/2 \rfloor} \\
+    &= 2^{\lfloor ((k+1) + 1)/2 \rfloor}
+  \end{align*}
+  $\therefore P(k) \rightarrow P(k+1)$ \textbf{holds} when $k+1$ is even\\
+  \textbf{Case 2:} assume $k+1$ is odd
+  \begin{align*}
+    P(k+1) &= f(k+1 - 1) \\
+    &= f(k) &\textbf{This holds by the Inductive Hypothesis}
+  \end{align*}
+  $\therefore$ \textbf{the statement holds for all $n \ge 1 $ by mathematical induction}
 \end{enumerate}
 \end{solution}
 
@@ -144,7 +219,36 @@ $\therefore$ \textbf{the statement holds for all $n \ge 1 $ by mathematical indu
 \begin{problem} (15 points)
 Section 5.3, Exercise 44, page 359
 \end{problem}
-\begin{solution} 
+\begin{solution} \ \\
+$l(T)$ is the number of leaves of a full binary tree T.
+$i(T )$ is the number of internal vertices of T \\
+$P: l(T) = 1 + i(T)$ \\
+\textbf{\underline{Basis Step}} \\
+$P(0)$ is a tree with a single vertex. By the basis step of the given recursive definition, the single root is a leaf and there are no internal vertices.
+\begin{align*}
+  l(t) &= 1 \\
+  i(t) &= 0 \\
+  l(t) &= 1 + i(t) = 1
+\end{align*}
+$\therefore P(1)$ holds \\
+Let $t$ be a tree smaller than $T$. Assume that the result is true for all $t$.
+\textbf{\underline{Recursive Step:}}
+Let $T_1$ be a left subtree and $T_2$ be a right subtree consisting of a root $r$. By the given definition $T = T_1 \cdot T_2$. It follows that
+\begin{eqnarray}
+  l(T) = l(T_1) + l(T_2)
+\end{eqnarray}
+The internal vertices of $T$ are the root $r$ of $T$ and the union of the
+set of internal vertices of $T_1$ and the set of internal vertices
+of $T_2$.
+\begin{eqnarray}
+  i(T) = i(T_1) + i(T_2) + 1
+\end{eqnarray}
+\begin{align*}
+  l(T) &= l(T_1) + l(T_2) &\textbf{By (1)}\\
+  &= i(T_1) + 1 + i(T_2) + 1 &\textbf{By Assumtion, $T_1,T_2$ are smaller than $T$}\\
+  &= i(T) + 1 \qed &\textbf{By (2)}
+\end{align*}
+$\therefore$ the statment has been proven by structural induction.
 \end{solution}
 
 \begin{problem} (\textbf{Extra credit 10 points})
