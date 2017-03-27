@@ -158,7 +158,8 @@ $$ n - \mid P \cup Q \mid = n - \floor*{\dfrac{n}{p}} - \floor*{\dfrac{n}{q}} + 
 \begin{problem} (10 points) 
 Section 6.2, Exercise 12, page 405.  Explain.
 \end{problem}
-\begin{solution} 
+\begin{solution} \ \\
+Let $p(n)$ be $n \% 5$. The results of $p(n)$ are $0,1,2,3,4$. It follows that $\mid p(n) \mid = 5$. From the given statement, it must be the case that $(p(a_1),p(b_1)) = (p(a_2),p(b_2))$. There are $5\cdot 5 = 25$ different ordered pars of the from $(p(a),p(b))$. By the pigeonhole principle, 26 ordered pairs are needed to guarantee that the statement is satisfied.
 \end{solution}
 
 \begin{problem} (10 points) 
