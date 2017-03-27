@@ -123,20 +123,36 @@ Section 6.1, Exercise 46, page 397
 \begin{solution} \ \\
 In how many ways can a photographer at a wedding arrange 6 people in a row from a group of 10 people, where
 the bride and the groom are among these 10 people, if
-\begin{enumerate}
+\begin{enumerate}[a)]
   \item the bride must be in the picture?
-  $$6 \cdot C(5,9) = 90720$$
+  $$6 \cdot C(9,5) = 90720$$
   \item both the bride and groom must be in the picture?
-  $$6 \cdot 5 \cdot C(4,8) = 50400$$
+  $$6 \cdot 5 \cdot C(8,4) = 50400$$
   \item exactly one of the bride and the groom is in the picture?
-  $$6 \cdot C(5,8) + 6 \cdot C(5,8) = 80640$$
+  $$6 \cdot C(8,5) + 6 \cdot C(8,5) = 80640$$
 \end{enumerate}
 \end{solution}
 
 \begin{problem} (10 points) 
 Section 6.1, Exercise 62, page 398.  Explain.
 \end{problem}
-\begin{solution} 
+\begin{solution}\ \\
+% Suppose that p and q are prime numbers and that n = pq.
+% Use the principle of inclusion–exclusion to find the num-
+% ber of positive integers not exceeding n that are relatively
+% prime to n.
+Inclusion-Explusion Principle:
+$$\mid P \cup Q \mid = \mid P \mid + \mid Q \mid - \mid P \cap Q \mid$$
+WolframAlpha defines relatively prime as: Two integers are relatively prime if they share no common positive factors (divisors) except 1
+\begin{align*}
+  n &= pq\\
+  \mid P \mid &= \floor*{\dfrac{n}{p}} \\
+  \mid Q \mid &= \floor*{\dfrac{n}{q}} \\
+  \mid P \cap Q \mid &= 1 \\
+  \mid P \cup Q \mid &= \floor*{\dfrac{n}{p}} + \floor*{\dfrac{n}{q}} - 1
+\end{align*}
+Since $P \cup Q$ represent the values of $p$ and $q$ that go into $n$, it must be the case that $n - \mid P \cup Q \mid$ represent the number of values that are relatively prime to $n$.
+$$ n - \mid P \cup Q \mid = n - \floor*{\dfrac{n}{p}} - \floor*{\dfrac{n}{q}} + 1$$
 \end{solution}
 
 \begin{problem} (10 points) 
