@@ -165,7 +165,7 @@ Let $p(n)$ be $n \% 5$. The results of $p(n)$ are $0,1,2,3,4$. It follows that $
 \begin{problem} (10 points) 
 Section 6.2, Exercise 14, page 405.
 \end{problem}
-\begin{solution}
+\begin{solution}\ \\
 a) Show that if seven integers are selected from the first
 10 positive integers, there must be at least two pairs
 of these integers with the sum 11.
@@ -181,6 +181,17 @@ selected rather than seven?
 Section 6.3, Exercise 20, page 413.
 \end{problem}
 \begin{solution} 
+How many bit strings of length 10 have
+\begin{enumerate}
+  \item exactly three 0s?
+  $$C10,3) = 120$$
+  \item more 0s than 1s?
+  $$C(10,6) + C(10,7) + C(10,8) + C(10,9) + C(10,10) = 386$$
+  \item at least seven 1s?
+  $$C(10,7) + C(10,8) + C(10,9) + C(10,10) = 176$$
+  \item at least three 1s?
+  $$2^{10} - C(10,3) - C(10,2) - C(10,1) - C(10,0) = 968$$
+\end{enumerate}
 \end{solution}
 
 \begin{problem} (10 points) 
