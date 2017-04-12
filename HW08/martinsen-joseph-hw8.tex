@@ -1,5 +1,5 @@
 \documentclass{article}
-\usepackage{amsmath,amssymb,amsthm,latexsym,paralist}
+\usepackage{amsmath,amssymb,amsthm,latexsym,paralist,enumitem}
 
 \theoremstyle{definition}
 \newtheorem{problem}{Problem}
@@ -13,6 +13,7 @@
   disclosed all resources (people, books, web sites, etc.) that have
   been used to prepare this homework. \\[2ex]
  \textbf{Signature:} \underline{\hspace*{8cm}} }
+ 
  
 \newcommand{\checklist}{\noindent\textbf{Checklist:}
 \begin{compactitem}[$\Box$] 
@@ -54,6 +55,8 @@ Spring 2017 -- Hyunyoung Lee\\}
 \name{ Joseph }{Martinsen}
 \begin{resources} (All people, books, articles, web pages, etc.\ that
   have been consulted when producing your answers to this homework)
+  
+  http://math.stackexchange.com/questions/881005/find-the-recurrence-relation-for-the-number-of-bit-strings-that-contain-the-stri
 \end{resources}
 \honor
 
@@ -80,7 +83,21 @@ Section 8.1, Exercise 10, page 511
 [Hint: Let $s_n$ denote the number of bit strings of length $n$ that
 contain the string $01$. One of the initial conditions is $s_0 = 0$.] 
 \end{problem}
-\begin{solution} 
+\begin{solution} \ \\
+\begin{enumerate}[label=(\alph*)]
+  \item 
+  \begin{align*}
+   a_n&=a_{n-1}+2^{n-1}+2^{n-3}+ \cdots +2^{n-n} \\
+   r &= \dfrac{1}{2} \\
+   a_n &= a_{n-1} + 2^{n-1} - 1 &\textbf{by Geometric Summation}
+  \end{align*}
+  \item 
+  $s_0 = 0 \qquad s_1 = 0$
+  
+  \item Using python I was able to compute the following:
+\end{enumerate}
+
+  
 \end{solution}
 
 \begin{problem} (10 points)
@@ -90,6 +107,14 @@ Section 8.1, Exercise 28, page 512. This problem has two parts as below.
 \ \\
 a) (4 points) Show that the Fibonacci numbers satisfy \ldots
 \ \\
+\begin{align*}
+  f_5 &= 5 f_1 + 3 f_0 \\
+  f_6 &= 5f_2 + 3f_1 \\
+  f_7 &= 5f_3 + 3f_2 \\
+  f_8 &= 5f_4 + 3f_3 \\
+  f_9 &= 
+\end{align*}
+
 b) (6 points) Use this recurrence relation to show that \ldots 
 (prove by induction on $n$)
 \end{solution}
