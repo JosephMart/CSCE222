@@ -54,7 +54,8 @@ Spring 2017 -- Hyunyoung Lee\\}
 \duedate{Wednesday, 4/19/2017 \textit{before} the beginning of class}{Wednesday, 4/19/2017}
 \name{ Joseph Martinsen }{503}
 \begin{resources} (All people, books, articles, web pages, etc.\ that
-  have been consulted when producing your answers to this homework)
+  have been consulted when producing your answers to this homework) \\
+  http://mathworld.wolfram.com/EquivalenceRelation.html
 \end{resources}
 \honor
 
@@ -221,7 +222,18 @@ $x\sim y$ if and only if $x/y=2^k$ for some integer $k$.
 Show that $\sim$ is an equivalence relation.
 \end{problem}
 \begin{solution} 
-\end{solution}
+\end{solution} \ \\
+      \textbf{Reflexive} if $(a,a) \in R$ for every element $a \in A$ \\
+      For $x = y = x$, $x \sim x \rightarrow \dfrac{x}{x} = 1 = 2^0$ \\
+      $\therefore R$ is reflexive
+      \textbf{Symmetric} if $(b,a) \in R$ whenever $(a,b) \in R$ for all $a,b \in A$ \\
+       $R(x,y): x/y = 2^{\log x/y}$ where $k = \log x/y$ since $x/y$ is always a number greater than 0 \\
+       $R(y,x): y/x = 2^{\log y/x}$ where $k = \log y/x$ \\
+      $\therefore R$ is symmetric
+      \textbf{Transitive} if whenever $(a,b) \in R$ and $(b,a) \in R$ then $(a,c) \in R$, for all $a,b,c \in A$ \\
+      For $R(x,y)$ and $R(y,z)$ it follows that $R(x,z)$ holds where $k = \log x/z$
+      $\therefore R$ is transitive \\
+      Since the relation is transitive, symmetric, and reflexive, the relation is an equivalence relation.
 
 \begin{problem} (10 points)
 Section 9.5, Exercise 2, page 615
