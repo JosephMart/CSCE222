@@ -55,7 +55,8 @@ Spring 2017 -- Hyunyoung Lee\\}
 \name{ Joseph Martinsen }{503}
 \begin{resources} (All people, books, articles, web pages, etc.\ that
   have been consulted when producing your answers to this homework) \\
-  http://mathworld.wolfram.com/EquivalenceRelation.html
+  http://mathworld.wolfram.com/EquivalenceRelation.html \\
+  https://math.stackexchange.com/questions/1037701/equivalence-relation-and-equivalence-classes
 \end{resources}
 \honor
 
@@ -76,7 +77,7 @@ Section 9.1, Exercise 6, page 581
       $\therefore R$ is symmetric
     
       \textbf{Anit-Symmetric} if $(a,b) \in R$ and $(b,a) \in R$, then $a=b$ for all $a,b \in A$ \\
-      For $x=1$, $y=-1$, it follows $1 + (-1) = 0$ and $-1 + 1 = 0$ eventhough $x \neq y$\\
+      For $x=1$, $y=-1$, it follows $1 + (-1) = 0$ and $-1 + 1 = 0$ even though $x \neq y$\\
       $\therefore R$ is not anti-symmetric 
     
       \textbf{Transitive} if whenever $(a,b) \in R$ and $(b,a) \in R$ then $(a,c) \in R$, for all $a,b,c \in A$ \\
@@ -273,7 +274,22 @@ Section 9.5, Exercise 16, page 615
 \begin{problem} (10 points)
 Section 9.5, Exercise 58, page 618
 \end{problem}
-\begin{solution} 
+\begin{solution} \ \\
+  \begin{enumerate}[label=(\alph*)]
+    \item
+      \textbf{Reflexive} if $(a,a) \in R$ for every element $a \in A$ \\
+      For $(B1, B2)$ where $B1 = B2$ it follows that $(B1,B1)$ holds without need of rotation
+      $\therefore R$ is reflexive \\
+      \textbf{Symmetric} if $(b,a) \in R$ whenever $(a,b) \in R$ for all $a,b \in A$ \\
+       By definition $(B1,B2)$ can be only if $B1$ can be obtained by multiple rotations on $B2$. It follows that $(B2,B1)$ by the same given definition. 
+      $\therefore R$ is symmetric \\
+      \textbf{Transitive} if whenever $(a,b) \in R$ and $(b,a) \in R$ then $(a,c) \in R$, for all $a,b,c \in A$ \\
+      Given $(B1,B2)$ and $R(B2,B3)$, it meanse that $B2$ is 0 or more rotations on $B1$, $B3$ is 0 or more $B2$ rotations, it follows that $(B1, B3)$ holds because $B3$ can be made by rotations on $B1$ \\
+      $\therefore R$ is transitive \\
+      Since the relation is transitive, symmetric, and reflexive, the relation is an equivalence relation.
+      
+      \item 
+  \end{enumerate}
 \end{solution}
 
 \begin{problem} (10 points)
