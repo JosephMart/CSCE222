@@ -1,7 +1,7 @@
 \documentclass{article}
 \usepackage{amsmath,amssymb,amsthm,latexsym,paralist}
 \usepackage{enumitem}
-
+\input xypic
 \theoremstyle{definition}
 \newtheorem{problem}{Problem}
 \newtheorem*{solution}{Solution}
@@ -283,7 +283,33 @@ You can answer the subproblem c) by either actually drawing the Hasse diagram
 or by clearly writing out the cover relation of the Hasse diagram instead of 
 drawing the diagram.
 \end{problem}
-\begin{solution} 
+\begin{solution} \ \\
+\begin{enumerate}[label=(\alph*)]
+  \item $\{ 1,1\} , \{ 1,2\} , \{ 1,3\} , \{ 1,4\} , \{ 2,1\} , \{ 2,2\}$
+  \item $\{ 3,2\} , \{ 3,3\} , \{ 3,4\} , \{ 4,1\} , \{ 4,2\} , \{ 4,3\}, \{ 4,4\}$
+  \item
+  $$
+\diagram
+(4,4) \\
+(4,3) \uline \\
+(4,2) \uline \\
+(4,1) \uline \\
+(3,4) \uline \\
+(3,3) \uline \\
+(3,2) \uline \\
+(3,1) \uline \\
+(2,4) \uline \\
+(2,3) \uline \\
+(2,2) \uline \\
+(2,1) \uline \\
+(1,4) \uline \\
+(1,3) \uline \\
+(1,2) \uline \\
+(1,1) \uline \\
+\enddiagram
+$$
+
+\end{enumerate}
 \end{solution}
 
 \begin{problem} ($8+8\times 2 = 24$ points)
