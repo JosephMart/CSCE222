@@ -240,6 +240,22 @@ Section 9.5, Exercise 2, page 615
 Section 9.5, Exercise 16, page 615
 \end{problem}
 \begin{solution} 
+  $$ ((a, b), (c, d) ) \in R \text{ iff } ad = bc$$
+  $a \cdot b = b \cdot a$ by communicative property of multiplication. It then follows $( (a,b), (b,a))$ $\therefore R$ is reflexive  \\
+  $ad = bc$ relates to $R((a,b),(c,d))$ \\
+  $bc = ad$ relates to $R((c,d),(a,b))$ \\
+  $\therefore R$ is symmetric. \\
+  Given $R0: ((a,b),(c,d))$ or $ad = bc$ and $R0: ((c,d),(e,f))$ or $cf=de$ it follows that $((a,b),(e,f))$ holds because of the following:
+  \begin{align*}
+    ad &= bc \\
+    \dfrac{a}{b} 7= \dfrac{c}{d} \\
+    cf &= de \\
+    \dfrac{c}{d} &= \dfrac{e}{f} \\
+    \dfrac{a}{b} &= \dfrac{e}{f} \\
+    af &= eb
+  \end{align*}
+  $\therefore R$ is is transitive \\
+  $\therefore R$ is equivalence relation  
 \end{solution}
 
 \begin{problem} (10 points)
