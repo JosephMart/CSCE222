@@ -180,7 +180,44 @@ Section 13.1, Exercise 18, page 856
 \begin{problem} (10 points)
 Section 13.1, Exercise 24, page 857
 \end{problem}
-\begin{solution} 
+\begin{solution} \ \\
+\begin{enumerate}
+  \item
+  $$
+  \xymatrix{
+    & & S \ar[dll] \ar[dl] \ar[d] \\
+    b & c & S \ar[dll] \ar[dl] \ar[d] \\
+    b & b & S  \ar[d] \\
+    &  & a
+  }
+  $$
+  Results in $bcbba$
+  
+  \item
+  $$
+  \xymatrix{
+    & & S \ar[dll] \ar[dl] \ar[d] \\
+    b & b & S \ar[dll] \ar[dl] \ar[d] \\
+    b & c & S \ar[dll] \ar[dl] \ar[d] \\
+    b & b & S \ar[d] \\
+    & & a
+  }
+  $$
+  Results in $bbbcbba$
+  
+  \item
+  $$
+  \xymatrix{
+    & & S \ar[dll] \ar[dl] \ar[d] \\
+    b & c & S \ar[dll] \ar[dl] \ar[d] \\
+    a & b & S \ar[dll] \ar[dl] \ar[d] \\
+    b & b & S \ar[dll] \ar[dl] \ar[d] \\
+    b & b & S \ar[dl] \ar[d] \\
+    & c & b
+  }
+  $$
+  Results in $bcabbbbbcb$
+\end{enumerate}
 \end{solution}
 
 \begin{problem} (6 points)
