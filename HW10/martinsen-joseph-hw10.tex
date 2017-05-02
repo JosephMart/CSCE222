@@ -1,0 +1,160 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm,latexsym,paralist,xypic}
+\input xypic % to draw the derivation tree using xymatrix
+\usepackage{tikz,pgf} % to draw the FSA using tikz
+\usetikzlibrary{automata}
+
+% If you want to enlarge the page size for the text area, you can uncomment the following 
+% four lines and adjust the text area as you wish by changing the values in the second { }.
+%\setlength{\topmargin}{-.1in}
+%\setlength{\oddsidemargin}{.2in}
+%\setlength{\textwidth}{6.1in}
+%\setlength{\textheight}{8.5in}
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+\newtheorem*{solution}{Solution}
+\newtheorem*{resources}{Resources}
+
+\newcommand{\name}[2]{\noindent\textbf{Name: #1}\hfill \textbf{Section: #2}}
+\newcommand{\honor}{\noindent On my honor, as an Aggie, I have neither
+  given nor received any unauthorized aid on any portion of the
+  academic work included in this assignment. Furthermore, I have
+  disclosed all resources (people, books, web sites, etc.) that have
+  been used to prepare this homework. \\[2ex]
+ \textbf{Signature:} \underline{\hspace*{10cm}} }
+ 
+\newcommand{\checklist}{\noindent\textbf{Checklist:}
+\begin{compactitem}[$\Box$] 
+\item Did you type in your name and section? 
+\item Did you disclose all resources that you have used? \\
+(This includes all people, books, websites, etc.\ that you have consulted)
+\item Did you sign that you followed the Aggie honor code? 
+\item Did you solve all problems? 
+\item Did you submit both the .tex and .pdf files of your homework separately 
+to the correct link on eCampus?
+\item Did you submit a signed hardcopy of the pdf file in class? 
+\end{compactitem}
+}
+
+\newcommand{\problemset}[1]{\begin{center}\textbf{Problem Set #1}\end{center}}
+\newcommand{\duedate}[2]{\begin{quote}\textbf{Due dates:} Electronic
+    submission of \textsl{yourLastName-yourFirstName-hw10.tex} and 
+    \textsl{yourLastName-yourFirstName-hw10.pdf} files of this homework is due on
+    \textbf{#1} on \texttt{http://ecampus.tamu.edu}. You will see two separate links
+    to turn in the .tex file and the .pdf file separately. Please do not archive or compress the files.  
+    A signed paper copy of the pdf file is due on \textbf{#2} at the beginning of class.
+    \textbf{If any of the three submissions are missing, your work will not be graded.}
+    \textbf{Late submissions of any form will not be accepted.}\end{quote} }
+
+\newcommand{\N}{\mathbf{N}}
+\newcommand{\R}{\mathbf{R}}
+\newcommand{\Z}{\mathbf{Z}}
+
+
+\begin{document}
+\vspace*{-18mm}
+\begin{center}
+{\large
+CSCE 222 [Sections 502, 503] Discrete Structures for Computing\\[.5ex]
+Spring 2017 -- Hyunyoung Lee\\}
+\end{center}
+\problemset{10}
+\duedate{Tuesday, 5/2/2017 \textit{before} the beginning of class}{Tuesday, 5/2/2017}
+\name{ Joseph Martinsen }{503}
+\begin{resources} (All people, books, articles, web pages, etc.\ that
+  have been consulted when producing your answers to this homework)
+\end{resources}
+\honor
+
+\bigskip
+
+\noindent
+In this problem set, you will earn total $100+5$ (extra credit) points.
+
+\begin{problem} (10 points)
+Section 13.1, Exercise 4, page 856
+\end{problem}
+\begin{solution} \ \\
+  \begin{enumerate}
+    \item 
+      \begin{align*}
+        S &\rightarrow 1S \\
+        &\rightarrow 11S \\
+        &\rightarrow 11100S \\
+        &\rightarrow 111000
+      \end{align*}
+      
+      \item
+      111001 does not belong in the language because the only production that
+      terminates with a terminal is $S \rightarrow 0$ which results in every member
+      in the language must end with 0, which 111001 does not.
+      
+      \item
+      $$L(G) = \{ 1^n 0^m \vert n\ge 0, m \ge 3 \} $$
+  \end{enumerate}
+\end{solution}
+
+\begin{problem} (10 points)
+Section 13.1, Exercise 6 a), b), c), and d), page 856
+\end{problem}
+\begin{solution} 
+\end{solution}
+
+\begin{problem} (16 points)
+Section 13.1, Exercise 14, page 856
+\end{problem}
+\begin{solution} 
+\end{solution}
+
+\begin{problem} (12 points)
+Section 13.1, Exercise 18, page 856
+\end{problem}
+\begin{solution} 
+\end{solution}
+
+\begin{problem} (10 points)
+Section 13.1, Exercise 24, page 857
+\end{problem}
+\begin{solution} 
+\end{solution}
+
+\begin{problem} (6 points)
+Section 13.2, Exercise 2 a), page 864
+\end{problem}
+\begin{solution} 
+\end{solution}
+
+\begin{problem} (6 points)
+Section 13.2, Exercise 4, page 864
+\end{problem}
+\begin{solution} 
+\end{solution}
+
+\begin{problem} (12 points)
+Section 13.3, Exercise 8, page 875
+\end{problem}
+\begin{solution} 
+\end{solution}
+
+\begin{problem} (12 points)
+Section 13.3, Exercise 10, page 875
+\end{problem}
+\begin{solution} 
+\end{solution}
+
+\begin{problem} (5 points)
+Section 13.3, Exercise 16, page 876
+\end{problem}
+\begin{solution} 
+\end{solution}
+
+\begin{problem} (6 points)
+Section 13.3, Exercise 28, page 876
+\end{problem}
+\begin{solution} 
+\end{solution}
+
+\goodbreak
+\checklist
+\end{document}
