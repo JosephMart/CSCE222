@@ -63,7 +63,8 @@ Spring 2017 -- Hyunyoung Lee\\}
 \duedate{Tuesday, 5/2/2017 \textit{before} the beginning of class}{Tuesday, 5/2/2017}
 \name{ Joseph Martinsen }{503}
 \begin{resources} (All people, books, articles, web pages, etc.\ that
-  have been consulted when producing your answers to this homework)
+  have been consulted when producing your answers to this homework) \\
+  http://madebyevan.com/fsm/
 \end{resources}
 \honor
 
@@ -292,7 +293,47 @@ $$\{\lambda \} \cup \{1\}\{0,1\}^* \cup \{0\}\{1\}^*\{0\}\{0,1\}^*$$
 \begin{problem} (6 points)
 Section 13.3, Exercise 28, page 876
 \end{problem}
-\begin{solution} 
+\begin{solution} \ \\
+% Used to draw: http://madebyevan.com/fsm/
+\begin{center}
+\begin{tikzpicture}[scale=0.2]
+\tikzstyle{every node}+=[inner sep=0pt]
+\draw [black] (10.9,-25.7) circle (3);
+\draw (10.9,-25.7) node {$s_0$};
+\draw [black] (23.3,-25.7) circle (3);
+\draw (23.3,-25.7) node {$s_1$};
+\draw [black] (35,-25.7) circle (3);
+\draw (35,-25.7) node {$s_2$};
+\draw [black] (47.7,-25.7) circle (3);
+\draw (47.7,-25.7) node {$s_3$};
+\draw [black] (47.7,-25.7) circle (2.4);
+\draw [black] (13.9,-25.7) -- (20.3,-25.7);
+\fill [black] (20.3,-25.7) -- (19.5,-25.2) -- (19.5,-26.2);
+\draw (17.1,-26.2) node [below] {$0$};
+\draw [black] (26.3,-25.7) -- (32,-25.7);
+\fill [black] (32,-25.7) -- (31.2,-25.2) -- (31.2,-26.2);
+\draw (29.15,-26.2) node [below] {$0$};
+\draw [black] (38,-25.7) -- (44.7,-25.7);
+\fill [black] (44.7,-25.7) -- (43.9,-25.2) -- (43.9,-26.2);
+\draw (41.35,-26.2) node [below] {$0$};
+\draw [black] (46.377,-23.02) arc (234:-54:2.25);
+\draw (47.7,-18.45) node [above] {$0,1$};
+\fill [black] (49.02,-23.02) -- (49.9,-22.67) -- (49.09,-22.08);
+\draw [black] (33.677,-23.02) arc (234:-54:2.25);
+\draw (35,-18.45) node [above] {$1$};
+\fill [black] (36.32,-23.02) -- (37.2,-22.67) -- (36.39,-22.08);
+\draw [black] (22.37,-22.86) arc (225.8699:-62.1301:2.25);
+\draw (24.64,-18.41) node [above] {$1$};
+\fill [black] (24.99,-23.23) -- (25.9,-23.01) -- (25.19,-22.31);
+\draw [black] (9.577,-23.02) arc (234:-54:2.25);
+\draw (10.9,-18.45) node [above] {$1$};
+\fill [black] (12.22,-23.02) -- (13.1,-22.67) -- (12.29,-22.08);
+\draw [black] (2,-25.7) -- (7.9,-25.7);
+\draw (1.5,-25.7) node [left] {$Start$};
+\fill [black] (7.9,-25.7) -- (7.1,-25.2) -- (7.1,-26.2);
+\end{tikzpicture}
+\end{center}
+
 \end{solution}
 
 \goodbreak
