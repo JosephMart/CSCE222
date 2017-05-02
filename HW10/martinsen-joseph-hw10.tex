@@ -112,7 +112,38 @@ $$L(G) = \{a^{2n} \vert n \ge 2 \} \cup \{b^n \vert n \ge 1 \} $$
 \begin{problem} (16 points)
 Section 13.1, Exercise 14, page 856
 \end{problem}
-\begin{solution} 
+\begin{solution} \ \\
+  \begin{enumerate}
+    \item
+    \begin{align*}
+      G &= (V,T,S,P) \\
+      V &= \{0,1,S\} \\
+      T &= \{0,1\} \\
+      P &= \{S \rightarrow 10, S \rightarrow 01, S \rightarrow 101\}
+    \end{align*}
+    \item
+    \begin{align*}
+      G &= (V,T,S,P) \\
+      V &= \{0,1,A,S\} \\
+      T &= \{0,1\} \\
+      P &= \{S \rightarrow 00A1, A \rightarrow AA, A \rightarrow 0, A \rightarrow 1 \}
+    \end{align*}
+    \item
+    \begin{align*}
+      G &= (V,T,S,P) \\
+      V &= \{0,1,A,B,S\} \\
+      T &= \{0,1\} \\
+      P &= \{S \rightarrow A0, B \rightarrow \lambda, A \rightarrow 11B, A \rightarrow 1B1, A \rightarrow B11, B \rightarrow 0B \}^*
+    \end{align*}
+    *0 is not even because you can not divide up 0 objects into two groups
+    \item
+    \begin{align*}
+      G &= (V,T,S,P) \\
+      V &= \{0,1,A,B,S\} \\
+      T &= \{0,1\} \\
+      P &= \{S \rightarrow AB, A \rightarrow B0, B \rightarrow A1, A \rightarrow \lambda, B \rightarrow \lambda\}
+    \end{align*}
+  \end{enumerate}
 \end{solution}
 
 \begin{problem} (12 points)
